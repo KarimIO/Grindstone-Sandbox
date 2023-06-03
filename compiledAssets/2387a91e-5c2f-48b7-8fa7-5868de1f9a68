@@ -1,0 +1,12 @@
+{
+	"name": "vase_hanging",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "69293e4c-2791-4251-8463-54730cd2ebeb",
+		"metalnessTexture": "fd105806-dca8-4add-a0ab-e84f241f18ce",
+		"roughnessTexture": "2f7a267f-9a9d-4aa2-8918-2ca13ced4bc6"
+	}
+}

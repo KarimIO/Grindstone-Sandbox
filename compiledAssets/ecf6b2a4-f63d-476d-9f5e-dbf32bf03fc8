@@ -1,0 +1,12 @@
+{
+	"name": "chain",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "47de403f-980b-42c2-8f97-cfb966eb3b75",
+		"metalnessTexture": "27e06010-7d32-4286-8eb9-e6698120eb93",
+		"roughnessTexture": "98a68901-2831-48e2-88d7-a2672def6566"
+	}
+}

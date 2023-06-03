@@ -1,0 +1,12 @@
+{
+	"name": "vase_round",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "8aaa283c-0c81-4079-bfec-aa39d23237a4",
+		"metalnessTexture": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
+		"roughnessTexture": "c5048d22-72d4-41b5-8733-a92bd7389e8d"
+	}
+}

@@ -1,0 +1,17 @@
+# Compiled Content (Included for now)
+# /[Cc]ompiled[Aa]ssets/
+# /[Bb]in/
+
+# UserSettings
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio cache directory
+.vs/
+.vscode/
+/[Tt]emp/
+/[Pp]roperties/
+/[Oo]bj/
+
+# Code Project Files
+*.csproj*
+*.sln

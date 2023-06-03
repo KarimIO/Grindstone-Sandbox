@@ -1,0 +1,12 @@
+{
+	"name": "fabric_a",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "05576f7e-8fe0-45e2-b865-0d0c452e6f98",
+		"metalnessTexture": "c54fc7a4-b349-4b7d-ae9b-b713fedd8231",
+		"roughnessTexture": "04423d28-7fae-4cfb-8a6f-60069abe50a6"
+	}
+}

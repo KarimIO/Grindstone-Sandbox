@@ -1,0 +1,95 @@
+{
+    "name": "Test Shader",
+    "renderQueue": "Opaque",
+    "shaderModules": [
+        "vertex",
+        "fragment"
+    ],
+    "uniformBuffers": [
+        {
+            "name": "MeshUbo",
+            "binding": 1,
+            "bufferSize": 64,
+            "usedIn": [
+                "vertex"
+            ],
+            "members": [
+                {
+                    "name": "model",
+                    "offset": 0,
+                    "memberSize": 64,
+                    "type": "Float"
+                }
+            ]
+        },
+        {
+            "name": "EngineUbo",
+            "binding": 0,
+            "bufferSize": 128,
+            "usedIn": [
+                "vertex"
+            ],
+            "members": [
+                {
+                    "name": "proj",
+                    "offset": 0,
+                    "memberSize": 64,
+                    "type": "Float"
+                },
+                {
+                    "name": "view",
+                    "offset": 64,
+                    "memberSize": 64,
+                    "type": "Float"
+                }
+            ]
+        },
+        {
+            "name": "MaterialUbo",
+            "binding": 2,
+            "bufferSize": 16,
+            "usedIn": [
+                "fragment"
+            ],
+            "members": [
+                {
+                    "name": "color",
+                    "offset": 0,
+                    "memberSize": 16,
+                    "type": "Float"
+                }
+            ]
+        }
+    ],
+    "textures": [],
+    "samplers": [
+        {
+            "name": "albedoTexture",
+            "binding": 3,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "normalTexture",
+            "binding": 4,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "metalnessTexture",
+            "binding": 5,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "roughnessTexture",
+            "binding": 6,
+            "usedIn": [
+                "fragment"
+            ]
+        }
+    ]
+}

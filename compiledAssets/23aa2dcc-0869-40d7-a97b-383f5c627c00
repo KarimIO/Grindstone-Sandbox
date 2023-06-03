@@ -1,0 +1,12 @@
+{
+	"name": "bricks",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "25501e7d-110d-4a1d-9891-355c63167535",
+		"metalnessTexture": "e74eb5d4-31c6-4c32-8f1a-665f2ef6154e",
+		"roughnessTexture": "3622191f-ad45-4339-9105-d4d343f86970"
+	}
+}

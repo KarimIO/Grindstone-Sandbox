@@ -1,0 +1,12 @@
+{
+	"name": "ceiling",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "cf98588b-c109-4447-9432-3cd9242008dc",
+		"metalnessTexture": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
+		"roughnessTexture": "2ffc44be-4d32-4bde-988f-ac0c01c8e50b"
+	}
+}

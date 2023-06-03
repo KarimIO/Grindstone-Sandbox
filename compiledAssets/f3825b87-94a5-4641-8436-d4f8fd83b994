@@ -1,0 +1,12 @@
+{
+	"name": "VasePlant",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "22b62ee9-d30e-48b9-861a-3ce08776653f",
+		"normalTexture": "864f1b3d-8d24-417a-8181-94159c149ab4",
+		"roughnessTexture": "790cc3a4-cfba-481e-b2c3-afd9e4def7ac"
+	}
+}

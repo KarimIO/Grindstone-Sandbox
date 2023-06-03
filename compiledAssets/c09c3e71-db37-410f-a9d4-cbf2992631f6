@@ -1,0 +1,12 @@
+{
+	"name": "Floor",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "d921d439-32aa-401c-aef3-46e2e3c916d5",
+		"normalTexture": "c1aea680-f74f-4fcf-81b0-f5c0661b1186",
+		"roughnessTexture": "ceee8d5a-394b-4e7d-a3c2-1ceab1ad1ae4"
+	}
+}

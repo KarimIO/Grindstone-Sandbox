@@ -1,0 +1,3 @@
+PluginBulletPhysics
+PluginScriptCSharp
+PluginRenderables3D

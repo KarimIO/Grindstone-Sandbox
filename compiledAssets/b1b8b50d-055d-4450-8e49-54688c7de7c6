@@ -1,0 +1,12 @@
+{
+	"name": "leaf",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "ced2fbda-fe18-4a1c-a006-1e904257e009",
+		"metalnessTexture": "e74eb5d4-31c6-4c32-8f1a-665f2ef6154e",
+		"roughnessTexture": "bb6bb7b5-e6df-4dc8-92ad-ec649b28f3c5"
+	}
+}

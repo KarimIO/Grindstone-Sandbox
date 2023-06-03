@@ -1,0 +1,12 @@
+{
+	"name": "Curtain Green",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "b7199e17-4294-4b2d-a27f-64478b370842",
+		"normalTexture": "53212df9-93c1-4df4-bf3a-35a40d4b11a9",
+		"roughnessTexture": "84b49335-8b90-404d-90c7-6931fc4a0aeb"
+	}
+}

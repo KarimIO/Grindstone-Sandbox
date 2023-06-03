@@ -1,0 +1,12 @@
+{
+	"name": "details",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "d43694c6-815c-4aba-82a3-f96d517d43dc",
+		"metalnessTexture": "f84db4f1-137a-4b0c-9ca4-ef108beff489",
+		"roughnessTexture": "62711a7d-bcc4-4ec2-b2f3-38adc3e330e4"
+	}
+}

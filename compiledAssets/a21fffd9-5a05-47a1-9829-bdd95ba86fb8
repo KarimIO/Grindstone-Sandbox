@@ -1,0 +1,12 @@
+{
+	"name": "lion",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "b9cadd0a-7622-4800-9e49-1324172c0cde",
+		"metalnessTexture": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
+		"roughnessTexture": "953cdc7f-0ac4-45ee-a5ef-92a204473b23"
+	}
+}

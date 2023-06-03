@@ -1,0 +1,109 @@
+{
+    "defaultUuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
+    "subassets": [
+        {
+            "name": "mesh",
+            "uuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90"
+        },
+        {
+            "name": "Leaves",
+            "uuid": "69ec0502-7ff9-4612-a9e8-b2446643e89c"
+        },
+        {
+            "name": "VasePlant",
+            "uuid": "2029abc4-b6e8-41d0-be96-49d22b0ff99f"
+        },
+        {
+            "name": "VaseRoudn",
+            "uuid": "9e3df9ef-99d6-4010-ba41-c32ca09c3ece"
+        },
+        {
+            "name": "Background",
+            "uuid": "b3f4525e-a08e-4ff8-8141-b7f634c430d4"
+        },
+        {
+            "name": "Fabric Red",
+            "uuid": "5d60fa9f-29b7-4245-a2d8-3bfe0a41a3c3"
+        },
+        {
+            "name": "Bricks",
+            "uuid": "4ccc2824-1307-4ca8-9cf5-eb680f08f8ac"
+        },
+        {
+            "name": "Arch",
+            "uuid": "59339279-0493-4041-8c78-6899da8e4000"
+        },
+        {
+            "name": "Ceiling",
+            "uuid": "ab814bb6-e567-4cbb-9757-a03078acd60c"
+        },
+        {
+            "name": "Column A",
+            "uuid": "c599895b-9631-4419-ae8f-cbf3dad07891"
+        },
+        {
+            "name": "Floor",
+            "uuid": "c09c3e71-db37-410f-a9d4-cbf2992631f6"
+        },
+        {
+            "name": "Column C",
+            "uuid": "a6161261-adb4-48f6-997f-191620342269"
+        },
+        {
+            "name": "Details",
+            "uuid": "c958d072-b723-45d0-a545-c8c0c149fb3d"
+        },
+        {
+            "name": "Column B",
+            "uuid": "0abe259c-a6be-4597-b4a1-b4ff5e761dbd"
+        },
+        {
+            "name": "Material__47.002",
+            "uuid": "2c53ea50-01e7-4477-8bd6-a5a0c1051b8c"
+        },
+        {
+            "name": "Flagpole",
+            "uuid": "d41a255c-a82a-49b4-a810-4fb591e32b90"
+        },
+        {
+            "name": "Fabric Green",
+            "uuid": "e9852309-29cb-4ec6-bfb2-f5331a11b939"
+        },
+        {
+            "name": "Fabric Blue",
+            "uuid": "130a033e-4504-4322-8058-cf8a982d0aec"
+        },
+        {
+            "name": "Curatin Blue",
+            "uuid": "a10dedd2-e343-424f-9b55-834aadf99766"
+        },
+        {
+            "name": "Curtain Red",
+            "uuid": "a53c14cb-cdb7-431e-8d5c-28598ad95ebb"
+        },
+        {
+            "name": "Curtain Green",
+            "uuid": "e6391407-a0ba-41ff-aacd-aeda870fc1ac"
+        },
+        {
+            "name": "Chain",
+            "uuid": "5625cbb9-8b7b-4cf6-82e9-747c81d6c031"
+        },
+        {
+            "name": "VaseHanging",
+            "uuid": "bb425eff-7b7d-4ff9-b517-ecccf8ea0536"
+        },
+        {
+            "name": "Vase",
+            "uuid": "802ab4ad-92a4-436f-94ad-69853a1852d1"
+        },
+        {
+            "name": "Lion",
+            "uuid": "d95f691e-4d49-4f1c-9687-3748a12e79c3"
+        },
+        {
+            "name": "Roof",
+            "uuid": "c3b37926-bfb1-4961-bb30-37167934404c"
+        }
+    ]
+}

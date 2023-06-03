@@ -1,0 +1,12 @@
+{
+	"name": "Fabric Red",
+	"shader": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+	"parameters": {
+		"color": [1, 1, 1, 1]
+	},
+	"samplers": {
+		"albedoTexture": "5bb35cb2-e3d8-4905-a520-7af5a64fc4b7",
+		"normalTexture": "da8980c5-9715-4b46-9935-a399c8c792f3",
+		"roughnessTexture": "a0514ec5-c6d5-43af-aac4-bf4b927c8d65"
+	}
+}
