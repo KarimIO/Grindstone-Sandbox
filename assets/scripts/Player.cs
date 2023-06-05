@@ -1,4 +1,7 @@
-﻿public class Player : Grindstone.SmartComponent
+﻿using Grindstone.Math;
+using System;
+
+public class Player : Grindstone.SmartComponent
 {
     #region Public Fields
     public float speed = 10.0f;
@@ -11,11 +14,18 @@
     #region Event Methods
     public override void OnUpdate()
     {
+        bool isWindowFocused = Grindstone.Input.InputManager.IsWindowFocused;
+        Grindstone.Input.InputManager.IsCursorVisible = !isWindowFocused;
+        if (!isWindowFocused)
+        {
+            return;
+        }
+
         Float2 halfWindowSize = new Float2(800.0f, 600.0f) / 2.0f;
         Float2 mousePos = Grindstone.Input.InputManager.MousePosition;
         Float2 lookVec = new Float2(
-            (mousePos.x - halfWindowSize.x) / halfWindowSize.x,
-            (mousePos.y - halfWindowSize.y) / halfWindowSize.y
+            (halfWindowSize.x - mousePos.x) / halfWindowSize.x,
+            (halfWindowSize.y - mousePos.y) / halfWindowSize.y
         );
         Grindstone.Input.InputManager.MousePosition = halfWindowSize;
         bool w = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.W);
@@ -29,12 +39,36 @@
             transf.Forward * fwd +
             transf.Right * rgt;
 
-        float dt = 0.02f;
+        float dt = (float)Grindstone.Time.GetDeltaTime();
         Float3 offset = movementDirection * dt * speed;
 
-        float mouseSensitivity = 8.0f;
-        lookEuler.pitch -= mouseSensitivity * lookVec.x * dt;
+        float mouseSensitivity = 20.0f;
+        lookEuler.pitch += mouseSensitivity * lookVec.x * dt;
         lookEuler.roll += mouseSensitivity * lookVec.y * dt;
+
+        const float maxViewAngle = (float)Math.PI * 0.45f;
+        const float doublePi = (float)Math.PI * 2.0f;
+
+        if (lookEuler.pitch > doublePi)
+        {
+            lookEuler.pitch -= doublePi;
+        }
+
+        if (lookEuler.pitch < doublePi)
+        {
+            lookEuler.pitch += doublePi;
+        }
+
+        if (lookEuler.roll > maxViewAngle)
+        {
+            lookEuler.roll = maxViewAngle;
+        }
+
+        if (lookEuler.roll < -maxViewAngle)
+        {
+            lookEuler.roll = -maxViewAngle;
+        }
+
         transf.Rotation = new Quaternion(lookEuler);
         transf.Position += offset;
     }
