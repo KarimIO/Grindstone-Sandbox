@@ -2,8 +2,9 @@
 # /[Cc]ompiled[Aa]ssets/
 # /[Bb]in/
 
-# UserSettings
+# User Files
 /[Uu]ser[Ss]ettings/
+/[Ll]og/
 
 # Visual Studio cache directory
 .vs/
