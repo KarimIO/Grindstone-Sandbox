@@ -21,13 +21,20 @@ public class Player : Grindstone.SmartComponent
             return;
         }
 
-        Float2 halfWindowSize = new Float2(800.0f, 600.0f) / 2.0f;
+        Grindstone.Window window = Grindstone.Window.Current;
+        if (Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.Escape))
+        {
+            window.Close();
+        }
+
+        Float2 halfWindowSize = window.Size / 2.0f;
         Float2 mousePos = Grindstone.Input.InputManager.MousePosition;
         Float2 lookVec = new Float2(
             (halfWindowSize.x - mousePos.x) / halfWindowSize.x,
             (halfWindowSize.y - mousePos.y) / halfWindowSize.y
         );
         Grindstone.Input.InputManager.MousePosition = halfWindowSize;
+
         bool w = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.W);
         bool s = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.S);
         bool a = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.A);
@@ -47,17 +54,6 @@ public class Player : Grindstone.SmartComponent
         lookEuler.roll += mouseSensitivity * lookVec.y * dt;
 
         const float maxViewAngle = (float)Math.PI * 0.45f;
-        const float doublePi = (float)Math.PI * 2.0f;
-
-        if (lookEuler.pitch > doublePi)
-        {
-            lookEuler.pitch -= doublePi;
-        }
-
-        if (lookEuler.pitch < doublePi)
-        {
-            lookEuler.pitch += doublePi;
-        }
 
         if (lookEuler.roll > maxViewAngle)
         {
