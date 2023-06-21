@@ -25,8 +25,9 @@ void main()
     vec4 posVec4 = meshUbo.model * vec4(vertexPosition, 1.0);
     gl_Position = (ubo.proj * ubo.view) * posVec4;
     fragmentPosition = posVec4.xyz;
-    fragmentNormal = vertexNormal;
-    fragmentTangent = vertexTangent;
+    mat3 modelMat3 = mat3(meshUbo.model[0].xyz, meshUbo.model[1].xyz, meshUbo.model[2].xyz);
+    fragmentNormal = modelMat3 * normalize(vertexNormal);
+    fragmentTangent = modelMat3 * normalize(vertexTangent);
     fragmentTexCoord0 = vertexTexCoord0;
 }
 
