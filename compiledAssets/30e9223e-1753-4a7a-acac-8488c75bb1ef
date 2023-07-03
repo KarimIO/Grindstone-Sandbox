@@ -9,36 +9,10 @@
         {
             "name": "EngineUbo",
             "binding": 0,
+            "descriptorSet": 0,
             "bufferSize": 140,
             "usedIn": [
-                "vertex"
-            ],
-            "members": [
-                {
-                    "name": "proj",
-                    "offset": 0,
-                    "memberSize": 64,
-                    "type": "Float"
-                },
-                {
-                    "name": "view",
-                    "offset": 64,
-                    "memberSize": 64,
-                    "type": "Float"
-                },
-                {
-                    "name": "eyePos",
-                    "offset": 128,
-                    "memberSize": 12,
-                    "type": "Float"
-                }
-            ]
-        },
-        {
-            "name": "EngineUbo",
-            "binding": 0,
-            "bufferSize": 140,
-            "usedIn": [
+                "vertex",
                 "fragment"
             ],
             "members": [
@@ -68,6 +42,7 @@
         {
             "name": "litSceneTexture",
             "binding": 1,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]

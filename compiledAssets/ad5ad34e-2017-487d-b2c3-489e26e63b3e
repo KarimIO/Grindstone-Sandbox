@@ -8,7 +8,8 @@
     "uniformBuffers": [
         {
             "name": "MeshUbo",
-            "binding": 1,
+            "binding": 0,
+            "descriptorSet": 2,
             "bufferSize": 64,
             "usedIn": [
                 "vertex"
@@ -25,6 +26,7 @@
         {
             "name": "EngineUbo",
             "binding": 0,
+            "descriptorSet": 1,
             "bufferSize": 128,
             "usedIn": [
                 "vertex"
@@ -46,7 +48,8 @@
         },
         {
             "name": "MaterialUbo",
-            "binding": 2,
+            "binding": 0,
+            "descriptorSet": 0,
             "bufferSize": 16,
             "usedIn": [
                 "fragment"
@@ -65,28 +68,32 @@
     "samplers": [
         {
             "name": "albedoTexture",
-            "binding": 3,
+            "binding": 1,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
         },
         {
             "name": "normalTexture",
-            "binding": 4,
+            "binding": 2,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
         },
         {
             "name": "metalnessTexture",
-            "binding": 5,
+            "binding": 3,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
         },
         {
             "name": "roughnessTexture",
-            "binding": 6,
+            "binding": 4,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]

@@ -3,13 +3,13 @@
 #shaderModule vertex
 #version 450
 
-layout(binding = 0) uniform EngineUbo {
+layout(set = 1, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
 	vec3 eyePos;
 } ubo;
 
-layout(binding = 1) uniform MeshUbo {
+layout(set = 2, binding = 0) uniform MeshUbo {
 	mat4 model;
 } meshUbo;
 
@@ -37,7 +37,7 @@ void main() {
 #shaderModule fragment
 #version 450
 
-layout(binding = 2) uniform MaterialUbo {
+layout(binding = 0) uniform MaterialUbo {
 	vec4 baseColor;
 } materialUbo;
 

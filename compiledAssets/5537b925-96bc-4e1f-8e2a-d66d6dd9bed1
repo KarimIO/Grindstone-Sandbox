@@ -9,9 +9,11 @@
         {
             "name": "EngineUbo",
             "binding": 0,
+            "descriptorSet": 0,
             "bufferSize": 140,
             "usedIn": [
-                "vertex"
+                "vertex",
+                "fragment"
             ],
             "members": [
                 {
@@ -37,6 +39,7 @@
         {
             "name": "LightUbo",
             "binding": 1,
+            "descriptorSet": 0,
             "bufferSize": 32,
             "usedIn": [
                 "fragment"
@@ -67,34 +70,6 @@
                     "type": "Float"
                 }
             ]
-        },
-        {
-            "name": "EngineUbo",
-            "binding": 0,
-            "bufferSize": 140,
-            "usedIn": [
-                "fragment"
-            ],
-            "members": [
-                {
-                    "name": "proj",
-                    "offset": 0,
-                    "memberSize": 64,
-                    "type": "Float"
-                },
-                {
-                    "name": "view",
-                    "offset": 64,
-                    "memberSize": 64,
-                    "type": "Float"
-                },
-                {
-                    "name": "eyePos",
-                    "offset": 128,
-                    "memberSize": 12,
-                    "type": "Float"
-                }
-            ]
         }
     ],
     "textures": [],
@@ -102,6 +77,7 @@
         {
             "name": "gbuffer3",
             "binding": 5,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
@@ -109,6 +85,7 @@
         {
             "name": "gbuffer0",
             "binding": 2,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
@@ -116,6 +93,7 @@
         {
             "name": "gbuffer1",
             "binding": 3,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
@@ -123,6 +101,7 @@
         {
             "name": "gbuffer2",
             "binding": 4,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
@@ -130,6 +109,7 @@
         {
             "name": "gbuffer4",
             "binding": 6,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]
