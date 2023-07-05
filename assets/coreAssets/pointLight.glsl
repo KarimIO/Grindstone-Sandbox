@@ -35,18 +35,18 @@ layout(binding = 0) uniform EngineUbo {
 	vec3 eyePos;
 } ubo;
 
-layout(binding = 1) uniform LightUbo {
+layout(binding = 1) uniform sampler2D gbuffer0;
+layout(binding = 2) uniform sampler2D gbuffer1;
+layout(binding = 3) uniform sampler2D gbuffer2;
+layout(binding = 4) uniform sampler2D gbuffer3;
+layout(binding = 5) uniform sampler2D gbuffer4;
+
+layout(set = 1, binding = 0) uniform LightUbo {
 	vec3 color;
 	float attenuationRadius;
 	vec3 position;
 	float intensity;
 } light;
-
-layout(binding = 2) uniform sampler2D gbuffer0;
-layout(binding = 3) uniform sampler2D gbuffer1;
-layout(binding = 4) uniform sampler2D gbuffer2;
-layout(binding = 5) uniform sampler2D gbuffer3;
-layout(binding = 6) uniform sampler2D gbuffer4;
 
 const float pi = 3.14159f;
 

@@ -38,8 +38,8 @@
         },
         {
             "name": "LightUbo",
-            "binding": 1,
-            "descriptorSet": 0,
+            "binding": 0,
+            "descriptorSet": 1,
             "bufferSize": 32,
             "usedIn": [
                 "fragment"
@@ -76,30 +76,6 @@
     "samplers": [
         {
             "name": "gbuffer3",
-            "binding": 5,
-            "descriptorSet": 0,
-            "usedIn": [
-                "fragment"
-            ]
-        },
-        {
-            "name": "gbuffer0",
-            "binding": 2,
-            "descriptorSet": 0,
-            "usedIn": [
-                "fragment"
-            ]
-        },
-        {
-            "name": "gbuffer1",
-            "binding": 3,
-            "descriptorSet": 0,
-            "usedIn": [
-                "fragment"
-            ]
-        },
-        {
-            "name": "gbuffer2",
             "binding": 4,
             "descriptorSet": 0,
             "usedIn": [
@@ -107,8 +83,32 @@
             ]
         },
         {
+            "name": "gbuffer0",
+            "binding": 1,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer1",
+            "binding": 2,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer2",
+            "binding": 3,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
             "name": "gbuffer4",
-            "binding": 6,
+            "binding": 5,
             "descriptorSet": 0,
             "usedIn": [
                 "fragment"
