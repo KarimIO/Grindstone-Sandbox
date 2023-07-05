@@ -35,7 +35,7 @@
 				{
 					"component": "Transform",
 					"params": {
-						"position": [-10, -1, 0],
+						"position": [0, -1, 0],
 						"scale": [0.02, 0.02, 0.02]
 					}
 				},
@@ -91,14 +91,22 @@
 				{
 					"component": "Transform",
 					"params": {
-						"position": [0, 2, 0],
+						"position": [
+							0,
+							2,
+							0
+						],
 						"parentEntity": 1
 					}
 				},
 				{
 					"component": "PointLight",
 					"params": {
-						"color": [1, 0.6, 0.3],
+						"color": [
+							1,
+							0.6,
+							0.3
+						],
 						"attenuationRadius": 40,
 						"intensity": 80
 					}
@@ -117,13 +125,21 @@
 				{
 					"component": "Transform",
 					"params": {
-						"position": [20, 2, 0]
+						"position": [
+							20,
+							2,
+							0
+						]
 					}
 				},
 				{
 					"component": "PointLight",
 					"params": {
-						"color": [0.1, 0.4, 0.8],
+						"color": [
+							0.1,
+							0.4,
+							0.8
+						],
 						"attenuationRadius": 40,
 						"intensity": 80
 					}
@@ -136,21 +152,63 @@
 				{
 					"component": "Tag",
 					"params": {
-						"tag": "Point Light 3"
+						"tag": "Spot Light"
 					}
 				},
 				{
 					"component": "Transform",
 					"params": {
-						"position": [-20, 2, 0]
+						"position": [
+							-20,
+							2,
+							0
+						]
 					}
 				},
 				{
-					"component": "PointLight",
+					"component": "SpotLight",
 					"params": {
-						"color": [0.2, 0.9, 0.3],
+						"color": [
+							0.2,
+							0.9,
+							0.3
+						],
 						"attenuationRadius": 40,
-						"intensity": 80
+						"intensity": 80,
+						"innerAngle": 0.2,
+						"outerAngle": 0.8,
+						"shadowResolution": 0.0
+					}
+				}
+			]
+		},
+		{
+			"entityId": 10,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Sun Light"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"rotation": [-0.7071068, 0, 0, 0.7071068],
+						"position": [
+							-20,
+							2,
+							0
+						]
+					}
+				},
+				{
+					"component": "DirectionalLight",
+					"params": {
+						"color": [1, 0.6, 0.3],
+						"sourceRadius": 40,
+						"intensity": 20,
+						"shadowResolution": 0.0
 					}
 				}
 			]
