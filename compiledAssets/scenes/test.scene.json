@@ -208,7 +208,7 @@
 						"color": [1, 0.6, 0.3],
 						"sourceRadius": 40,
 						"intensity": 20,
-						"shadowResolution": 0.0
+						"shadowResolution": 1024.0
 					}
 				}
 			]
