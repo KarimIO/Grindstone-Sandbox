@@ -87,6 +87,14 @@
     "textures": [],
     "samplers": [
         {
+            "name": "depthMap",
+            "binding": 1,
+            "descriptorSet": 1,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
             "name": "gbuffer3",
             "binding": 4,
             "descriptorSet": 0,

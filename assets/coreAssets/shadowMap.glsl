@@ -7,11 +7,6 @@ layout(location = 0) in vec3 vertexPosition;
 
 layout(binding = 0) uniform LightUbo {
 	mat4 shadowMatrix;
-	vec3 color;
-	float sourceRadius;
-	vec3 direction;
-	float intensity;
-	float shadowResolution;
 } light;
 
 void main() {
