@@ -15,14 +15,8 @@
 					"params": {
 						"position": [
 							0,
-							40,
+							2,
 							0
-						],
-						"rotation": [
-							-0.7071068,
-							0,
-							0,
-							0.7071068
 						]
 					}
 				},
@@ -218,7 +212,7 @@
 						"color": [1, 0.6, 0.3],
 						"sourceRadius": 40,
 						"intensity": 20,
-						"shadowResolution": 600.0
+						"shadowResolution": 2048.0
 					}
 				}
 			]
