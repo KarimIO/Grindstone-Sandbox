@@ -119,6 +119,14 @@
             ]
         },
         {
+            "name": "shadowMap",
+            "binding": 1,
+            "descriptorSet": 1,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
             "name": "gbuffer4",
             "binding": 5,
             "descriptorSet": 0,

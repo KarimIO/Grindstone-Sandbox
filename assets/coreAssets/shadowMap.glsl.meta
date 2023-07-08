@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "fc5b427f-7847-419d-a34d-2a55778eccbd",
+    "subassets": [
+        {
+            "name": "shader",
+            "uuid": "fc5b427f-7847-419d-a34d-2a55778eccbd",
+            "type": "Shader"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Shadow Mapping",
+    "renderQueue": "Lighting",
+    "shaderModules": [
+        "vertex",
+        "fragment"
+    ],
+    "uniformBuffers": [
+        {
+            "name": "LightUbo",
+            "binding": 0,
+            "descriptorSet": 0,
+            "bufferSize": 64,
+            "usedIn": [
+                "vertex"
+            ],
+            "members": [
+                {
+                    "name": "shadowMatrix",
+                    "offset": 0,
+                    "memberSize": 64,
+                    "type": "Float"
+                }
+            ]
+        }
+    ],
+    "textures": [],
+    "samplers": []
+}

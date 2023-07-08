@@ -73,6 +73,11 @@ vec3 TransformNormalToWorldSpace(vec3 vertexNormalValue, vec3 normalTextureSampl
 
 void main() {
 	vec4 albedo = materialUbo.color * texture(albedoTexture, fragmentTexCoord0);
+
+	if (albedo.a < 0.5f) {
+		discard;
+	}
+
 	vec3 textureSpaceNormal = texture(normalTexture, fragmentTexCoord0).rgb;
 	float metalness = texture(metalnessTexture, fragmentTexCoord0).r;
 	float roughness = texture(roughnessTexture, fragmentTexCoord0).r;
