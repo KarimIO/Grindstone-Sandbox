@@ -87,14 +87,6 @@
     "textures": [],
     "samplers": [
         {
-            "name": "depthMap",
-            "binding": 1,
-            "descriptorSet": 1,
-            "usedIn": [
-                "fragment"
-            ]
-        },
-        {
             "name": "gbuffer3",
             "binding": 4,
             "descriptorSet": 0,
@@ -122,6 +114,14 @@
             "name": "gbuffer2",
             "binding": 3,
             "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "shadowMap",
+            "binding": 1,
+            "descriptorSet": 1,
             "usedIn": [
                 "fragment"
             ]

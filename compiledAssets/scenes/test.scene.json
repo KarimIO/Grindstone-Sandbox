@@ -10,7 +10,16 @@
 						"tag": "Player Camera"
 					}
 				},
-				{ "component": "Transform" },
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							-20,
+							2,
+							0
+						]
+					}
+				},
 				{ "component": "Camera" },
 				{ "component": "AudioListener" },
 				{
@@ -173,11 +182,11 @@
 							0.9,
 							0.3
 						],
-						"attenuationRadius": 40,
+						"attenuationRadius": 15.0,
 						"intensity": 80,
 						"innerAngle": 0.2,
 						"outerAngle": 0.8,
-						"shadowResolution": 0.0
+						"shadowResolution": 600.0
 					}
 				}
 			]
@@ -208,7 +217,7 @@
 						"color": [1, 0.6, 0.3],
 						"sourceRadius": 40,
 						"intensity": 30,
-						"shadowResolution": 1024.0
+						"shadowResolution": 600.0
 					}
 				}
 			]

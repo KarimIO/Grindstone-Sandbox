@@ -53,6 +53,8 @@ layout(set = 1, binding = 0) uniform LightUbo {
 	float shadowResolution;
 } light;
 
+layout(set = 1, binding = 1) uniform sampler2D shadowMap;
+
 const float pi = 3.14159f;
 
 // Schlick
@@ -165,20 +167,6 @@ float ShadowRandom(vec4 seed4) {
     return fract(sin(dotProduct) * 43758.5453);
 }
 
-float GetShadowValue(in vec3 pos, in float nl) {
-	vec4 shadowCoord = light.shadowMatrix * vec4(pos,1);
-	vec3 shadowCoordsFinal = shadowCoord.xyz / shadowCoord.w;
-	float bias = 0.005;
-
-	float visibility = 1.0f;
-	for (int i=0; i < 4; i++) {
-        // int index = int(16.0 * ShadowRandom(vec4(floor(pos.xyz * 1000.0), i))) % 16;
-        // visibility -= 0.25 * (1.0 - texture(shadowMap, vec3(shadowCoordsFinal.xy + poissonDisk[index] / light.shadowResolution, shadowCoordsFinal.z - bias)));
-    }
-
-	return visibility;
-}
-
 void main() {
 	vec4 gbuffer3Value = texture(gbuffer3, fragmentTexCoord);
 
@@ -214,6 +202,18 @@ void main() {
 		0.0f
 	);
 
-	outColor = vec4(litValues, 1);
+	float nl = dot(lightDirection, normal);
+	
+	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
+    vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
+    float pixelDepth = pow(projCoords.z, 8);
+	
+    float closestDepth = pow(texture(shadowMap, projCoords.xy).x, 8);
+
+	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1;
+	bool isInLight = closestDepth < pixelDepth;
+	float isInLightMap = isInMap ? 1.0f : 0.0f;
+
+	outColor = vec4(isInLightMap * closestDepth + diffuse * (1.0f - isInLightMap), 1);
 }
 #endShaderModule

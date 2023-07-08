@@ -50,7 +50,7 @@ layout(set = 1, binding = 0) uniform LightUbo {
 	float shadowResolution;
 } light;
 
-layout(set = 1, binding = 1) uniform sampler2D depthMap;
+layout(set = 1, binding = 1) uniform sampler2D shadowMap;
 
 const float pi = 3.14159f;
 
@@ -155,33 +155,6 @@ float ShadowRandom(vec4 seed4) {
     return fract(sin(dotProduct) * 43758.5453);
 }
 
-float GetShadowValue(in vec3 pos, in float nl) {
-	vec4 shadowCoord = light.shadowMatrix * vec4(pos,1);
-	float bias = 0.005;
-	bias = clamp(bias, 0, 0.01);
-	
-	float visibility = 1.0f;
-
-	bool isInMap = shadowCoord.x > 0.0f && shadowCoord.x < 1.0f &&
-		shadowCoord.y > 0.0f && shadowCoord.y < 1.0f;
-
-	if (!isInMap) {
-		return 0.0f;
-	}
-
-	/*
-	for (int i=0; i < 4; i++){
-        int index = int(16.0*ShadowRandom(vec4(floor(pos.xyz*1000.0), i)))%16;
-
-		vec2 randomOffset = poissonDisk[index] / light.shadowResolution;
-    }
-	*/
-	vec3 shadowMapUv = vec3(shadowCoord.xy, shadowCoord.z - bias);
-	visibility -= texture(depthMap, shadowMapUv.xy).r <= shadowMapUv.z ? 1.0 : 0.0;
-	
-	return clamp(visibility, 0, 1);
-}
-
 void main() {
 	vec4 gbuffer3Value = texture(gbuffer3, fragmentTexCoord);
 
@@ -205,7 +178,16 @@ void main() {
 	);
 
 	float nl = dot(light.direction, normal);
-	float shadow = light.shadowResolution > 0.0f ? GetShadowValue(position, nl) : 1.0f;
-	outColor = vec4(shadow * litValues, 1);
+	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
+    vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
+    float pixelDepth = projCoords.z;
+	
+    float closestDepth = texture(shadowMap, projCoords.xy).x;
+
+	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1;
+	bool isInLight = closestDepth < pixelDepth;
+	float isInLightMap = (isInMap && isInLight) ? 1.0f : 0.0f;
+
+	outColor = vec4(isInLightMap + diffuse * (1.0f - isInLightMap), 1);
 }
 #endShaderModule
