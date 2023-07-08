@@ -14,9 +14,15 @@
 					"component": "Transform",
 					"params": {
 						"position": [
-							-20,
-							2,
+							0,
+							40,
 							0
+						],
+						"rotation": [
+							-0.7071068,
+							0,
+							0,
+							0.7071068
 						]
 					}
 				},
@@ -203,12 +209,7 @@
 				{
 					"component": "Transform",
 					"params": {
-						"rotation": [-0.7071068, 0, 0, 0.7071068],
-						"position": [
-							-20,
-							2,
-							0
-						]
+						"rotation": [-0.65, 0, 0, 0.72]
 					}
 				},
 				{
@@ -216,7 +217,7 @@
 					"params": {
 						"color": [1, 0.6, 0.3],
 						"sourceRadius": 40,
-						"intensity": 30,
+						"intensity": 20,
 						"shadowResolution": 600.0
 					}
 				}

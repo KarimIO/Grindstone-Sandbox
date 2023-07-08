@@ -210,7 +210,7 @@ void main() {
 	
     float closestDepth = texture(shadowMap, projCoords.xy).x;
 
-	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1 && projCoords.z >= 0 && projCoords.z <= 1;
+	bool isInMap = projCoords.z >= 0 && projCoords.z <= 1;
 	bool isInLight = closestDepth >= pixelDepth;
 	float isInLightMap = (isInMap && isInLight) ? 1.0f : 0.0f;
 
