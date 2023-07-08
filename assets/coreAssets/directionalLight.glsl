@@ -166,19 +166,20 @@ float GetShadowValue(in vec3 pos, in float nl) {
 		shadowCoord.y > 0.0f && shadowCoord.y < 1.0f;
 
 	if (!isInMap) {
-		visibility = 0.0f;
+		return 0.0f;
 	}
 
+	/*
 	for (int i=0; i < 4; i++){
         int index = int(16.0*ShadowRandom(vec4(floor(pos.xyz*1000.0), i)))%16;
 
 		vec2 randomOffset = poissonDisk[index] / light.shadowResolution;
-		vec3 shadowMapUv = vec3(shadowCoord.xy + randomOffset, shadowCoord.z - bias);
-
-        visibility -= 0.25*(1.0 - texture(depthMap, shadowMapUv.xy)).r;
     }
+	*/
+	vec3 shadowMapUv = vec3(shadowCoord.xy, shadowCoord.z - bias);
+	visibility -= texture(depthMap, shadowMapUv.xy).r <= shadowMapUv.z ? 1.0 : 0.0;
 	
-	return visibility;
+	return clamp(visibility, 0, 1);
 }
 
 void main() {
