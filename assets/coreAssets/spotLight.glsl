@@ -206,14 +206,14 @@ void main() {
 	
 	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
     vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
-    float pixelDepth = pow(projCoords.z, 8);
+    float pixelDepth = projCoords.z;
 	
-    float closestDepth = pow(texture(shadowMap, projCoords.xy).x, 8);
+    float closestDepth = texture(shadowMap, projCoords.xy).x;
 
-	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1;
-	bool isInLight = closestDepth < pixelDepth;
-	float isInLightMap = isInMap ? 1.0f : 0.0f;
+	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1 && projCoords.z >= 0 && projCoords.z <= 1;
+	bool isInLight = closestDepth >= pixelDepth;
+	float isInLightMap = (isInMap && isInLight) ? 1.0f : 0.0f;
 
-	outColor = vec4(isInLightMap * closestDepth + diffuse * (1.0f - isInLightMap), 1);
+	outColor = vec4(isInLightMap * litValues, 1);
 }
 #endShaderModule
