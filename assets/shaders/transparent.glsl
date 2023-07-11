@@ -1,5 +1,6 @@
 #name Transparent Shader
 #renderQueue Transparent
+#geometryRenderer Mesh3d
 #shaderModule vertex
 #version 450
 

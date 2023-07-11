@@ -1,6 +1,9 @@
 {
     "name": "Point Light",
+    "geometryRenderer": "",
     "renderQueue": "Lighting",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

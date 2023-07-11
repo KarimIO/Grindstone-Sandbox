@@ -1,6 +1,9 @@
 {
     "name": "Sky Shader",
+    "geometryRenderer": "Mesh3d",
     "renderQueue": "Unlit",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

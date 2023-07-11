@@ -216,6 +216,41 @@
 					}
 				}
 			]
+		},
+		{
+			"entityId": 11,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Sky Sphere"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "bf1058a0-98c4-4eaa-8bac-32e539774cd8"
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"cead2f2d-49e4-4265-acc0-4c1a1e0f7ba4"
+						]
+					}
+				}
+			]
 		}
 	]
 }

@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "defaultUuid": "bf1058a0-98c4-4eaa-8bac-32e539774cd8",
+    "subassets": [
+        {
+            "name": "mesh",
+            "uuid": "bf1058a0-98c4-4eaa-8bac-32e539774cd8",
+            "type": "Mesh3d"
+        },
+        {
+            "name": "DefaultMaterial",
+            "uuid": "8a1f6f56-86b7-4c4c-9f58-e816024ea574",
+            "type": "Material"
+        }
+    ]
+}

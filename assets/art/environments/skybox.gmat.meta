@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "cead2f2d-49e4-4265-acc0-4c1a1e0f7ba4",
+    "subassets": [
+        {
+            "name": "material",
+            "uuid": "cead2f2d-49e4-4265-acc0-4c1a1e0f7ba4",
+            "type": "Material"
+        }
+    ]
+}

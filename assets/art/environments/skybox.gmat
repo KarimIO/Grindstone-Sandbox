@@ -1,0 +1,8 @@
+{
+	"name": "Skybox",
+	"shader": "60532933-a423-4e08-a23d-b81ee3631782",
+	"parameters": {},
+	"samplers": {
+		"skybox": "5331ba08-cb9c-4e62-a596-be90b2a90ab0"
+	}
+}

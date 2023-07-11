@@ -1,6 +1,9 @@
 {
     "name": "Spot Light",
+    "geometryRenderer": "",
     "renderQueue": "Lighting",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

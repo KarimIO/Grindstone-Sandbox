@@ -1,5 +1,6 @@
 #name Test Shader
 #renderQueue Opaque
+#geometryRenderer Mesh3d
 #shaderModule vertex
 #version 450
 

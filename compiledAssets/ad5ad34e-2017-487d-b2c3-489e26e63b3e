@@ -1,6 +1,9 @@
 {
     "name": "Test Shader",
+    "geometryRenderer": "Mesh3d",
     "renderQueue": "Opaque",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

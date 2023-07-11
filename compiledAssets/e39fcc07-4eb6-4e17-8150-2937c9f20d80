@@ -1,6 +1,9 @@
 {
     "name": "Transparent Shader",
+    "geometryRenderer": "Mesh3d",
     "renderQueue": "Transparent",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

@@ -1,6 +1,9 @@
 {
     "name": "Tonemap Post-Processing",
+    "geometryRenderer": "",
     "renderQueue": "Lighting",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

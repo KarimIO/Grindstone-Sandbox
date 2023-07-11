@@ -1,5 +1,6 @@
 #name Sky Shader
 #renderQueue Unlit
+#geometryRenderer Mesh3d
 #shaderModule vertex
 #version 450
 

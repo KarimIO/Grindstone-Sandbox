@@ -1,6 +1,9 @@
 {
     "name": "Shadow Mapping",
+    "geometryRenderer": "",
     "renderQueue": "Lighting",
+    "transparencyMode": "",
+    "cullMode": "",
     "shaderModules": [
         "vertex",
         "fragment"

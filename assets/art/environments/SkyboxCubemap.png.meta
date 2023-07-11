@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "5331ba08-cb9c-4e62-a596-be90b2a90ab0",
+    "subassets": [
+        {
+            "name": "texture",
+            "uuid": "5331ba08-cb9c-4e62-a596-be90b2a90ab0",
+            "type": "Texture"
+        }
+    ]
+}
