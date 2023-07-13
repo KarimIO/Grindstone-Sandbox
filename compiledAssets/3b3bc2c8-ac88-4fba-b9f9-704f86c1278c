@@ -1,0 +1,123 @@
+{
+    "name": "Screen-Space Ambient Occlusion",
+    "geometryRenderer": "",
+    "renderQueue": "Lighting",
+    "transparencyMode": "",
+    "cullMode": "",
+    "shaderModules": [
+        "vertex",
+        "fragment"
+    ],
+    "uniformBuffers": [
+        {
+            "name": "EngineUbo",
+            "binding": 0,
+            "descriptorSet": 0,
+            "bufferSize": 140,
+            "usedIn": [
+                "vertex",
+                "fragment"
+            ],
+            "members": [
+                {
+                    "name": "proj",
+                    "offset": 0,
+                    "memberSize": 64,
+                    "type": "Float"
+                },
+                {
+                    "name": "view",
+                    "offset": 64,
+                    "memberSize": 64,
+                    "type": "Float"
+                },
+                {
+                    "name": "eyePos",
+                    "offset": 128,
+                    "memberSize": 12,
+                    "type": "Float"
+                }
+            ]
+        },
+        {
+            "name": "SSAOBufferObject",
+            "binding": 0,
+            "descriptorSet": 1,
+            "bufferSize": 1032,
+            "usedIn": [
+                "fragment"
+            ],
+            "members": [
+                {
+                    "name": "kernels",
+                    "offset": 0,
+                    "memberSize": 1024,
+                    "type": "Float"
+                },
+                {
+                    "name": "radius",
+                    "offset": 1024,
+                    "memberSize": 4,
+                    "type": "Float"
+                },
+                {
+                    "name": "bias",
+                    "offset": 1028,
+                    "memberSize": 4,
+                    "type": "Float"
+                }
+            ]
+        }
+    ],
+    "textures": [],
+    "samplers": [
+        {
+            "name": "gbuffer1",
+            "binding": 2,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer0",
+            "binding": 1,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer2",
+            "binding": 3,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "ssaoNoise",
+            "binding": 1,
+            "descriptorSet": 1,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer3",
+            "binding": 4,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer4",
+            "binding": 5,
+            "descriptorSet": 0,
+            "usedIn": [
+                "fragment"
+            ]
+        }
+    ]
+}
