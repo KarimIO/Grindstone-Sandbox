@@ -203,7 +203,7 @@
 				{
 					"component": "Transform",
 					"params": {
-						"rotation": [-0.65, 0, 0, 0.72]
+						"rotation": [-0.738, 0, 0, 0.78]
 					}
 				},
 				{
@@ -246,7 +246,7 @@
 					"component": "MeshRenderer",
 					"params": {
 						"materials": [
-							"cead2f2d-49e4-4265-acc0-4c1a1e0f7ba4"
+							"6977799c-5e4f-48ab-af7a-e4f980387779"
 						]
 					}
 				}

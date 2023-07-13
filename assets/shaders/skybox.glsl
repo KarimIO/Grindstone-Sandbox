@@ -1,4 +1,4 @@
-#name Skybox
+#name Skybox (Cubemap)
 #renderQueue Skybox
 #geometryRenderer Mesh3d
 #shaderModule vertex
