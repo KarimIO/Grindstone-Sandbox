@@ -1,40 +1,38 @@
 {
-    "name": "Tonemap Post-Processing",
+    "name": "Bloom",
     "geometryRenderer": "",
     "renderQueue": "Lighting",
     "transparencyMode": "",
     "cullMode": "",
     "shaderModules": [
-        "vertex",
-        "fragment"
+        "compute"
     ],
     "uniformBuffers": [
         {
-            "name": "EngineUbo",
+            "name": "ControlUniformBuffer",
             "binding": 0,
             "descriptorSet": 0,
-            "bufferSize": 140,
+            "bufferSize": 24,
             "usedIn": [
-                "vertex",
-                "fragment"
+                "compute"
             ],
             "members": [
                 {
-                    "name": "proj",
+                    "name": "params",
                     "offset": 0,
-                    "memberSize": 64,
+                    "memberSize": 16,
                     "type": "Float"
                 },
                 {
-                    "name": "view",
-                    "offset": 64,
-                    "memberSize": 64,
-                    "type": "Float"
+                    "name": "stage",
+                    "offset": 16,
+                    "memberSize": 4,
+                    "type": "Int"
                 },
                 {
-                    "name": "eyePos",
-                    "offset": 128,
-                    "memberSize": 12,
+                    "name": "LOD",
+                    "offset": 20,
+                    "memberSize": 4,
                     "type": "Float"
                 }
             ]
@@ -43,19 +41,19 @@
     "textures": [],
     "samplers": [
         {
-            "name": "litSceneTexture",
-            "binding": 1,
-            "descriptorSet": 0,
-            "usedIn": [
-                "fragment"
-            ]
-        },
-        {
-            "name": "bloomTexture",
+            "name": "inImage1",
             "binding": 2,
             "descriptorSet": 0,
             "usedIn": [
-                "fragment"
+                "compute"
+            ]
+        },
+        {
+            "name": "inImage2",
+            "binding": 3,
+            "descriptorSet": 0,
+            "usedIn": [
+                "compute"
             ]
         }
     ]
