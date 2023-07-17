@@ -211,7 +211,7 @@
 					"params": {
 						"color": [1, 0.6, 0.3],
 						"sourceRadius": 40,
-						"intensity": 20,
+						"intensity": 10,
 						"shadowResolution": 2048.0
 					}
 				}
