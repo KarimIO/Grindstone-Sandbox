@@ -83,17 +83,25 @@
             ]
         },
         {
-            "name": "gbuffer4",
-            "binding": 5,
-            "descriptorSet": 0,
+            "name": "specularMap",
+            "binding": 0,
+            "descriptorSet": 2,
             "usedIn": [
                 "fragment"
             ]
         },
         {
-            "name": "irradianceMap",
+            "name": "brdfLUT",
             "binding": 1,
             "descriptorSet": 1,
+            "usedIn": [
+                "fragment"
+            ]
+        },
+        {
+            "name": "gbuffer4",
+            "binding": 5,
+            "descriptorSet": 0,
             "usedIn": [
                 "fragment"
             ]

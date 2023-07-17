@@ -44,8 +44,8 @@
 				{
 					"component": "Transform",
 					"params": {
-						"position": [0, -1, 0],
-						"scale": [0.02, 0.02, 0.02]
+						"position": [ 0, -1, 0 ],
+						"scale": [ 0.02, 0.02, 0.02 ]
 					}
 				},
 				{
@@ -203,13 +203,13 @@
 				{
 					"component": "Transform",
 					"params": {
-						"rotation": [-0.738, 0, 0, 0.78]
+						"rotation": [ -0.738, 0, 0, 0.78 ]
 					}
 				},
 				{
 					"component": "DirectionalLight",
 					"params": {
-						"color": [1, 0.6, 0.3],
+						"color": [ 1, 0.6, 0.3 ],
 						"sourceRadius": 40,
 						"intensity": 10,
 						"shadowResolution": 2048.0
@@ -248,6 +248,26 @@
 						"materials": [
 							"6977799c-5e4f-48ab-af7a-e4f980387779"
 						]
+					}
+				}
+			]
+		},
+		{
+			"entityId": 12,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Environment Map"
+					}
+				},
+				{
+					"component": "Transform"
+				},
+				{
+					"component": "EnvironmentMap",
+					"params": {
+						"specularTexture": "85a45f9c-0963-41d1-89f9-f16a07fabf04"
 					}
 				}
 			]
