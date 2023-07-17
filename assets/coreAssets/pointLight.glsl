@@ -66,7 +66,7 @@ float Light_V( in float NL, in float NV, in float alphaSqr ) {
 	float Lambda_GGXV = NL * sqrt (( - NV * alphaSqr + NV ) * NV + alphaSqr );
 	float Lambda_GGXL = NV * sqrt (( - NL * alphaSqr + NL ) * NL + alphaSqr );
 
-	return 0.25f / ( Lambda_GGXV + Lambda_GGXL );
+	return 0.25f / max( Lambda_GGXV + Lambda_GGXL, 0.0001f );
 }
 
 float Diff_Disney(float NdotV, float NdotL, float LdotH, float linearRoughness) {
@@ -119,7 +119,7 @@ vec3 LightPointCalc(
 	float lightRadiusSqr = lightRadius * lightRadius;
 	float attenuationFactor = distSqr / lightRadiusSqr;
 	float attenuation = clamp(1 - attenuationFactor * attenuationFactor, 0, 1); 
-	attenuation = attenuation * attenuation / (distSqr + 0.001);
+	attenuation = attenuation * attenuation / (distSqr + 0.0001);
 
 	vec3 H = normalize(eyeDir + lightDir);
 	

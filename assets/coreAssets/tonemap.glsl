@@ -36,6 +36,7 @@ layout(binding = 0) uniform EngineUbo {
 } ubo;
 
 layout(binding = 1) uniform sampler2D litSceneTexture;
+layout(binding = 2) uniform sampler2D bloomTexture;
 
 vec3 linearToSRGB(vec3 inColor) {
 	vec3 outColor;
@@ -56,8 +57,9 @@ vec3 hdrTransform(vec3 color) {
 }
 
 void main() {
-	vec3 litValues = texture(litSceneTexture, fragmentTexCoord).rgb;
-	vec3 tonemapped = hdrTransform(litValues);
+	vec3 sceneColor = texture(litSceneTexture, fragmentTexCoord).rgb;
+	vec3 bloomColor = texture(bloomTexture, fragmentTexCoord).rgb;
+	vec3 tonemapped = hdrTransform(sceneColor + bloomColor);
 	vec3 srgb = linearToSRGB(tonemapped);
 
 	outColor = vec4(srgb, 1);
