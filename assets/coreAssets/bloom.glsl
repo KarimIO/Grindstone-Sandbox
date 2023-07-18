@@ -39,6 +39,8 @@ vec3 Upsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize, float radius)
 }
 
 vec3 Downsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize) {
+	texCoord += texelSize / 2.0f;
+
 	vec3 a = texture(srcTexture, texCoord + texelSize * vec2(-2.0f,-2.0f)).rgb;
 	vec3 b = texture(srcTexture, texCoord + texelSize * vec2( 0.0f,-2.0f)).rgb;
 	vec3 c = texture(srcTexture, texCoord + texelSize * vec2( 2.0f,-2.0f)).rgb;
@@ -66,7 +68,7 @@ vec3 Downsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize) {
 				+ ((a + c + g + i) * 0.03125f)
 				+ ((b + d + f + h) * 0.0625f)
 				+ ((j + k + l + m) * 0.125f);
-
+	
 	return result;
 }
 
@@ -104,9 +106,9 @@ void main() {
 		color.rgb = existing + upsampledTexture;
 	}
 	else if (ubo.stage == bloomStageApply) {
-		vec2 bloomTexSize = vec2(textureSize(inImage1, 0));
+		vec2 bloomTexSize = vec2(textureSize(inImage2, 0));
 		float sampleScale = 1.0f;
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / imgSize, sampleScale);
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, sampleScale);
 		color.rgb = upsampledTexture;
 	}
 
