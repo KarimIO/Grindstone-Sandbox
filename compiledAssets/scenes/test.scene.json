@@ -89,40 +89,6 @@
 			]
 		},
 		{
-			"entityId": 7,
-			"components": [
-				{
-					"component": "Tag",
-					"params": {
-						"tag": "Point Light"
-					}
-				},
-				{
-					"component": "Transform",
-					"params": {
-						"position": [
-							0,
-							2,
-							0
-						],
-						"parentEntity": 1
-					}
-				},
-				{
-					"component": "PointLight",
-					"params": {
-						"color": [
-							1,
-							0.6,
-							0.3
-						],
-						"attenuationRadius": 40,
-						"intensity": 80
-					}
-				}
-			]
-		},
-		{
 			"entityId": 8,
 			"components": [
 				{
@@ -135,7 +101,7 @@
 					"component": "Transform",
 					"params": {
 						"position": [
-							20,
+							21,
 							2,
 							0
 						]
@@ -168,7 +134,7 @@
 					"component": "Transform",
 					"params": {
 						"position": [
-							-20,
+							-22,
 							2,
 							0
 						]

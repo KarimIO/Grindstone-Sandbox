@@ -46,12 +46,11 @@ layout(set = 2, binding = 0) uniform sampler2D specularMap;
 
 const float pi = 3.14159f;
 
-vec3 Fresnel(in vec3 f0, in float f90, in float VH) {
+vec3 Light_F(in vec3 f0, in float f90, in float VH) {
 	return f0 + (f90-f0) * pow(1-VH, 5.0f);
 }
 
-vec3 fresnelSchlickRoughness(float cosTheta, vec3 F0, float roughness)
-{
+vec3 FresnelSchlickRoughness(float cosTheta, vec3 F0, float roughness) {
 	return F0 + (max(vec3(1.0 - roughness), F0) - F0) * pow(clamp(1.0 - cosTheta, 0.0, 1.0), 5.0);
 }   
 
@@ -64,6 +63,51 @@ vec2 SampleSphericalMap(vec3 v) {
 	return uv;
 }
 
+vec3 sphericalHarmonics[] = {
+	// First Band
+	vec3(.38, .43, .45),
+	// Second Band
+	vec3(.29, .36, .41),
+	vec3(-0.04,  0.03,  0.01),
+	vec3(-0.10, -0.10, -0.09),
+	// Third Band
+	vec3(-0.06, -0.06, -0.04),
+	vec3(-0.01, -0.01, -0.05),
+	vec3(-0.09, -0.13, -0.15),
+	vec3(-0.06, -0.05, -0.04),
+	vec3(-0.02, -0.00, -0.05)
+};
+
+vec3 GetIrradiance(vec3 normal) {
+	float x = normal.x;
+	float y = normal.y;
+	float z = normal.z;
+
+	float c[] = {
+		0.282095,
+		0.488603,
+		1.092548,
+		0.315392,
+		0.546274
+	};
+	
+	vec3 result = (
+		sphericalHarmonics[0] * c[0] +
+
+		sphericalHarmonics[1] * c[1] * x +
+		sphericalHarmonics[2] * c[1] * y +
+		sphericalHarmonics[3] * c[1] * z +
+
+		sphericalHarmonics[4] * c[2] * z * x +
+		sphericalHarmonics[5] * c[2] * y * z +
+		sphericalHarmonics[6] * c[2] * y * x +
+		sphericalHarmonics[7] * c[3] * (3.0 * z * z - 1.0) +
+		sphericalHarmonics[8] * c[4] * (x*x - y*y)
+	);
+
+	return max(result, vec3(0.0));
+}
+
 void main() {
 	vec4 gbuffer3Value = texture(gbuffer3, fragmentTexCoord);
 
@@ -71,7 +115,7 @@ void main() {
 	vec3 albedo = texture(gbuffer1, fragmentTexCoord).rgb;
 	vec3 normal = texture(gbuffer2, fragmentTexCoord).rgb;
 	vec3 specularInput = gbuffer3Value.rgb;
-	float roughness = gbuffer3Value.a;
+	float roughness = gbuffer3Value.a * gbuffer3Value.a;
 	float ao = texture(ssao, fragmentTexCoord).r;
 	
 	vec3 eyeDir = normalize(ubo.eyePos - position);
@@ -79,15 +123,16 @@ void main() {
 	vec2 reflectUv = SampleSphericalMap(reflectRay);
 	
 	float NV = max(dot(normal, eyeDir), 0.0);
-
-	vec3 F = fresnelSchlickRoughness(NV, specularInput, roughness * roughness);
 	
 	const float MAX_REFLECTION_LOD = 4.0;
+	vec3 f0 = 0.32 * specularInput * specularInput;
+	float f90 = clamp(50 * dot(f0, vec3(0.33)), 0, 1);
+	vec3 F = Light_F(f0, f90, NV);
 	vec3 prefilteredColor = textureLod(specularMap, reflectUv, roughness * MAX_REFLECTION_LOD).rgb;   
 	vec2 envBRDF  = texture(brdfLUT, vec2(NV, roughness)).rg;
 	vec3 specular = prefilteredColor * (F * envBRDF.x + envBRDF.y);
 
-	vec3 irradiance = vec3(0.05, 0.1, 0.15);
+	vec3 irradiance = GetIrradiance(normal);
 
 	vec3 kS = F;
 	vec3 kD = 1.0 - kS;
