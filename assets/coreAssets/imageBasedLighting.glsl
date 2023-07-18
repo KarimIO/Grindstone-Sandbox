@@ -63,25 +63,25 @@ vec2 SampleSphericalMap(vec3 v) {
 	return uv;
 }
 
-vec3 sphericalHarmonics[] = {
+vec3 sphericalHarmonics[] =  {
 	// First Band
-	vec3(.38, .43, .45),
+	vec3(2.58676, 2.730808, 3.152812),
 	// Second Band
-	vec3(.29, .36, .41),
-	vec3(-0.04,  0.03,  0.01),
-	vec3(-0.10, -0.10, -0.09),
+	vec3(-0.431493, -0.665128, -0.969124),
+	vec3(-0.353886, 0.048348, 0.672755),
+	vec3(-0.604269, -0.88623, -1.298684),
 	// Third Band
-	vec3(-0.06, -0.06, -0.04),
-	vec3(-0.01, -0.01, -0.05),
-	vec3(-0.09, -0.13, -0.15),
-	vec3(-0.06, -0.05, -0.04),
-	vec3(-0.02, -0.00, -0.05)
+	vec3(0.320121, 0.422942, 0.541783),
+	vec3(-0.137435, -0.168666, -0.229637),
+	vec3(-0.052101, -0.149999, -0.232127),
+	vec3(-0.117312, -0.167151, -0.265015),
+	vec3(-0.090028, -0.021071, 0.08956)
 };
 
 vec3 GetIrradiance(vec3 normal) {
-	float x = normal.x;
+	float x = normal.z;
 	float y = normal.y;
-	float z = normal.z;
+	float z = normal.x;
 
 	float c[] = {
 		0.282095,
@@ -105,7 +105,7 @@ vec3 GetIrradiance(vec3 normal) {
 		sphericalHarmonics[8] * c[4] * (x*x - y*y)
 	);
 
-	return max(result, vec3(0.0));
+	return max(result / pi, vec3(0.0));
 }
 
 void main() {
@@ -119,7 +119,7 @@ void main() {
 	float ao = texture(ssao, fragmentTexCoord).r;
 	
 	vec3 eyeDir = normalize(ubo.eyePos - position);
-	vec3 reflectRay = reflect(-eyeDir, normal);
+	vec3 reflectRay = 2 * dot(eyeDir, normal) * normal - eyeDir;
 	vec2 reflectUv = SampleSphericalMap(reflectRay);
 	
 	float NV = max(dot(normal, eyeDir), 0.0);
