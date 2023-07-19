@@ -8,7 +8,8 @@ const float epsilon = 1.0e-4;
 layout(binding = 0) uniform ControlUniformBuffer {
 	vec4 thresholdFilter;
 	int stage;
-	float LOD;
+	float levelOfDetail;
+	float filterRadius;
 } ubo;
 
 layout(binding = 1, rgba32f) restrict writeonly uniform image2D outImage;
@@ -99,16 +100,14 @@ void main() {
 	}
 	else if (ubo.stage == bloomStageUpsample) {
 		vec2 bloomTexSize = vec2(textureSize(inImage2, 0));
-		float sampleScale = 1.0f;
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, sampleScale);
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, ubo.filterRadius);
 
 		vec3 existing = texture(inImage2, texCoords).rgb;
 		color.rgb = existing + upsampledTexture;
 	}
 	else if (ubo.stage == bloomStageApply) {
 		vec2 bloomTexSize = vec2(textureSize(inImage2, 0));
-		float sampleScale = 1.0f;
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, sampleScale);
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, ubo.filterRadius);
 		color.rgb = upsampledTexture;
 	}
 
