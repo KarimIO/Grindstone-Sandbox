@@ -1,4 +1,5 @@
 #name Skybox (Spherical Map)
+#cullMode Front
 #renderQueue Skybox
 #geometryRenderer Mesh3d
 #shaderModule vertex

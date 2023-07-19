@@ -3,7 +3,7 @@
     "geometryRenderer": "Mesh3d",
     "renderQueue": "Skybox",
     "transparencyMode": "",
-    "cullMode": "",
+    "cullMode": "Front",
     "shaderModules": [
         "vertex",
         "fragment"
