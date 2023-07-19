@@ -8,12 +8,12 @@ public class Player : Grindstone.SmartComponent
     #endregion
 
     #region Private Fields
-    private EulerAngles lookEuler = new EulerAngles();
+    private EulerAngles lookEuler = new EulerAngles(0.0f, 0.0f, 0.0f);
+    private bool isFirstFrame = true;
     #endregion
 
     #region Event Methods
-    public override void OnUpdate()
-    {
+    public override void OnUpdate() {
         bool isWindowFocused = Grindstone.Input.InputManager.IsWindowFocused;
         Grindstone.Input.InputManager.IsCursorVisible = !isWindowFocused;
         if (!isWindowFocused)
@@ -28,6 +28,12 @@ public class Player : Grindstone.SmartComponent
         }
 
         Float2 halfWindowSize = window.Size / 2.0f;
+        if (isFirstFrame) {
+            Grindstone.Input.InputManager.MousePosition = halfWindowSize;
+            isFirstFrame = false;
+            return;
+        }
+
         Float2 mousePos = Grindstone.Input.InputManager.MousePosition;
         Float2 lookVec = new Float2(
             (halfWindowSize.x - mousePos.x) / halfWindowSize.x,
