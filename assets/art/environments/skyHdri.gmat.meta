@@ -3,7 +3,7 @@
     "defaultUuid": "6977799c-5e4f-48ab-af7a-e4f980387779",
     "subassets": [
         {
-            "name": "material",
+            "name": "Skybox",
             "uuid": "6977799c-5e4f-48ab-af7a-e4f980387779",
             "type": "Material"
         }

@@ -3,7 +3,7 @@
     "defaultUuid": "31cc60ab-59cb-43b5-94bb-3951844c8f76",
     "subassets": [
         {
-            "name": "shader",
+            "name": "Spot Light",
             "uuid": "31cc60ab-59cb-43b5-94bb-3951844c8f76",
             "type": "Shader"
         }

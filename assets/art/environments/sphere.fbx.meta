@@ -3,7 +3,7 @@
     "defaultUuid": "bf1058a0-98c4-4eaa-8bac-32e539774cd8",
     "subassets": [
         {
-            "name": "mesh",
+            "name": "sphere",
             "uuid": "bf1058a0-98c4-4eaa-8bac-32e539774cd8",
             "type": "Mesh3d"
         },

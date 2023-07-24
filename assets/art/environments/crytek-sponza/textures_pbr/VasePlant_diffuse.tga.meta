@@ -3,7 +3,7 @@
     "defaultUuid": "22b62ee9-d30e-48b9-861a-3ce08776653f",
     "subassets": [
         {
-            "name": "texture",
+            "name": "VasePlant_diffuse",
             "uuid": "22b62ee9-d30e-48b9-861a-3ce08776653f",
             "type": "Texture"
         }

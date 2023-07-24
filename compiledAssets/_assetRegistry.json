@@ -1,0 +1,728 @@
+[
+    {
+        "name": "VaseHanging",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "bb425eff-7b7d-4ff9-b517-ecccf8ea0536",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Curtain_Green_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Green_normal.tga",
+        "uuid": "53212df9-93c1-4df4-bf3a-35a40d4b11a9",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VaseRoudn",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "9e3df9ef-99d6-4010-ba41-c32ca09c3ece",
+        "assetType": "Material"
+    },
+    {
+        "name": "VaseHanging_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseHanging_roughness.tga",
+        "uuid": "41b621ea-051f-46aa-a6ca-09ecb35be34d",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VasePlant_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VasePlant_diffuse.tga",
+        "uuid": "22b62ee9-d30e-48b9-861a-3ce08776653f",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_c_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_c_normal.tga",
+        "uuid": "43bacde7-73c7-45a4-ac1c-8100a457d541",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Details_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Details_normal.tga",
+        "uuid": "3586e1dc-0e6d-45ec-992c-8d8943ba0e0c",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_a_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_a_diffuse.tga",
+        "uuid": "17d6ecd9-452f-4f55-bae0-cde1098c9ec5",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Curatin Blue",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "a10dedd2-e343-424f-9b55-834aadf99766",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Fabric_Green_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Green_diffuse.tga",
+        "uuid": "606a3cd1-91e8-48f9-b155-190f30c8fb48",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VaseHanging_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseHanging_diffuse.tga",
+        "uuid": "892ec5cc-9fdf-4692-9354-fcb1f37d2588",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Curtain Red",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "a53c14cb-cdb7-431e-8d5c-28598ad95ebb",
+        "assetType": "Material"
+    },
+    {
+        "name": "Screen-Space Ambient Occlusion",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\screenSpaceAmbientOcclusion.glsl",
+        "uuid": "3b3bc2c8-ac88-4fba-b9f9-704f86c1278c",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Sponza_Fabric_Red_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Red_normal.tga",
+        "uuid": "da8980c5-9715-4b46-9935-a399c8c792f3",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Fabric_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_roughness.tga",
+        "uuid": "a0514ec5-c6d5-43af-aac4-bf4b927c8d65",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VasePlant",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "2029abc4-b6e8-41d0-be96-49d22b0ff99f",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Ceiling_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Ceiling_roughness.tga",
+        "uuid": "2ffc44be-4d32-4bde-988f-ac0c01c8e50b",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Chain",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "5625cbb9-8b7b-4cf6-82e9-747c81d6c031",
+        "assetType": "Material"
+    },
+    {
+        "name": "Ceiling",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "ab814bb6-e567-4cbb-9757-a03078acd60c",
+        "assetType": "Material"
+    },
+    {
+        "name": "Bloom",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\bloom.glsl",
+        "uuid": "8a2475b4-8731-456c-beb7-2d51db7914f9",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Sponza_Arch_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Arch_roughness.tga",
+        "uuid": "736176b2-a22d-48e8-a2ea-e137b2d01a6e",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Fabric_Red_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Red_diffuse.tga",
+        "uuid": "5bb35cb2-e3d8-4905-a520-7af5a64fc4b7",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_b_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_b_diffuse.tga",
+        "uuid": "524af8b0-e993-4d92-8389-622e48b5976e",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_a_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_a_roughness.tga",
+        "uuid": "20795aaf-a341-4cd7-8c24-d1365cc25a74",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Vase",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "802ab4ad-92a4-436f-94ad-69853a1852d1",
+        "assetType": "Material"
+    },
+    {
+        "name": "Spot Light",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\spotLight.glsl",
+        "uuid": "31cc60ab-59cb-43b5-94bb-3951844c8f76",
+        "assetType": "Shader"
+    },
+    {
+        "name": "ChainTexture_Albedo",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\ChainTexture_Albedo.tga",
+        "uuid": "5d9ad3a9-73db-4d12-b1b0-b632b9b991c7",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Arch_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Arch_diffuse.tga",
+        "uuid": "82579ca6-df75-4cd3-afe8-5a3015b8c871",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VasePlant_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VasePlant_roughness.tga",
+        "uuid": "790cc3a4-cfba-481e-b2c3-afd9e4def7ac",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Image-Based Lighting",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\imageBasedLighting.glsl",
+        "uuid": "5227a9a2-4a62-4f1b-9906-2b6acbf1b8d3",
+        "assetType": "Shader"
+    },
+    {
+        "name": "sphere",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\sphere.fbx",
+        "uuid": "bf1058a0-98c4-4eaa-8bac-32e539774cd8",
+        "assetType": "Mesh3d"
+    },
+    {
+        "name": "Sponza_Ceiling_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Ceiling_normal.tga",
+        "uuid": "e02148a0-0670-4b28-bf80-4cb37ef67e69",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_b_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_b_roughness.tga",
+        "uuid": "71ac2fa0-bdde-4fb8-9ec4-2fb66f1f1d8b",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Fabric Red",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "5d60fa9f-29b7-4245-a2d8-3bfe0a41a3c3",
+        "assetType": "Material"
+    },
+    {
+        "name": "Skybox (Spherical Map)",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\shaders\\skyboxHdri.glsl",
+        "uuid": "9c67849f-76d0-403a-b088-1b60dcf448f7",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Sponza_Curtain_Red_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Red_diffuse.tga",
+        "uuid": "fa62829e-5bf3-45d5-afd7-d746fcac2c11",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Skybox",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\skyHdri.gmat",
+        "uuid": "6977799c-5e4f-48ab-af7a-e4f980387779",
+        "assetType": "Material"
+    },
+    {
+        "name": "SkyHdri",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\SkyHdri.hdr",
+        "uuid": "85a45f9c-0963-41d1-89f9-f16a07fabf04",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Column B",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "0abe259c-a6be-4597-b4a1-b4ff5e761dbd",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Details_metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Details_metallic.tga",
+        "uuid": "b3825d9b-c467-42cd-94a9-17e0db586acd",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_c_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_c_diffuse.tga",
+        "uuid": "3d5d3298-165e-4d9a-90d4-a33ebc427454",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Fabric_Blue_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Blue_normal.tga",
+        "uuid": "7a997a96-b7fc-46af-a5ba-5e43c0e5c7b6",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_c_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_c_roughness.tga",
+        "uuid": "bba4b78e-b791-4e75-9f16-142b5be7bd4e",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Ceiling_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Ceiling_diffuse.tga",
+        "uuid": "cf98588b-c109-4447-9432-3cd9242008dc",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_FlagPole_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_FlagPole_roughness.tga",
+        "uuid": "1c2cab83-77e5-4053-a64a-bc8530b7d8c1",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Floor_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Floor_normal.tga",
+        "uuid": "c1aea680-f74f-4fcf-81b0-f5c0661b1186",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Lion_Roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Lion_Roughness.tga",
+        "uuid": "953cdc7f-0ac4-45ee-a5ef-92a204473b23",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Shadow Mapping",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\shadowMap.glsl",
+        "uuid": "fc5b427f-7847-419d-a34d-2a55778eccbd",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Arch",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "59339279-0493-4041-8c78-6899da8e4000",
+        "assetType": "Material"
+    },
+    {
+        "name": "Lion_Normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Lion_Normal.tga",
+        "uuid": "d850ef78-be70-4005-a9c8-6d085a38862c",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VaseHanging_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseHanging_normal.tga",
+        "uuid": "8832e875-1e70-4718-b7b6-2dcc26685983",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Curtain_Red_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Red_normal.tga",
+        "uuid": "9296f474-d4ec-47ba-b005-3078cf6a0ff3",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Vase_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Vase_roughness.tga",
+        "uuid": "29563d74-a366-4bc4-a740-5cf23f52b80d",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Details",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "c958d072-b723-45d0-a545-c8c0c149fb3d",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Fabric_Green_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Green_normal.tga",
+        "uuid": "05e2a472-bc18-4cfa-8c1e-e153728e926c",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Floor",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "c09c3e71-db37-410f-a9d4-cbf2992631f6",
+        "assetType": "Material"
+    },
+    {
+        "name": "Dielectric_metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Dielectric_metallic.tga",
+        "uuid": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
+        "assetType": "Texture"
+    },
+    {
+        "name": "ChainTexture_Metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\ChainTexture_Metallic.tga",
+        "uuid": "26021469-4dac-4972-a758-5aff8830333d",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Fabric_metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_metallic.tga",
+        "uuid": "67520a69-edad-4cfe-95e5-79c1b23149ea",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Vase_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Vase_diffuse.tga",
+        "uuid": "6d78f167-4155-421a-925b-3ca4a38531b6",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Background_Normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Background_Normal.tga",
+        "uuid": "406a0765-6db0-41b4-9297-d0a53b88583f",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Column C",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "a6161261-adb4-48f6-997f-191620342269",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Roof_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Roof_normal.tga",
+        "uuid": "aed0f55e-c869-420f-aace-a3d65fc80fda",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Background",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "b3f4525e-a08e-4ff8-8141-b7f634c430d4",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Thorn_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Thorn_roughness.tga",
+        "uuid": "65eb055e-acfe-44a4-9cae-53ac1b0671ef",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Flagpole",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "d41a255c-a82a-49b4-a810-4fb591e32b90",
+        "assetType": "Material"
+    },
+    {
+        "name": "Column A",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "c599895b-9631-4419-ae8f-cbf3dad07891",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Floor_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Floor_roughness.tga",
+        "uuid": "ceee8d5a-394b-4e7d-a3c2-1ceab1ad1ae4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "DefaultMaterial",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\sphere.fbx",
+        "uuid": "8a1f6f56-86b7-4c4c-9f58-e816024ea574",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Bricks_a_Normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Bricks_a_Normal.tga",
+        "uuid": "23676055-ae19-4712-95ae-697882d05744",
+        "assetType": "Texture"
+    },
+    {
+        "name": "ChainTexture_Roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\ChainTexture_Roughness.tga",
+        "uuid": "6fb7ff53-8046-4c0a-be52-255609823253",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Material__47.002",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "2c53ea50-01e7-4477-8bd6-a5a0c1051b8c",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Arch_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Arch_normal.tga",
+        "uuid": "f398a84f-334d-4fa1-9db5-1da45a7ac5f2",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Test Shader",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\shaders\\test.glsl",
+        "uuid": "ad5ad34e-2017-487d-b2c3-489e26e63b3e",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Sponza_Curtain_Blue_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Blue_normal.tga",
+        "uuid": "0258644d-49ce-4ef1-a362-a5e878ff40e7",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Column_a_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_a_normal.tga",
+        "uuid": "528fa348-4543-423d-8336-5132d523d5ef",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Curtain_Blue_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Blue_diffuse.tga",
+        "uuid": "499cd346-ec91-45d7-9c59-7dc606411f58",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Background_Roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Background_Roughness.tga",
+        "uuid": "4c3f7246-9262-4687-bd61-02e8bea3bb45",
+        "assetType": "Texture"
+    },
+    {
+        "name": "ChainTexture_Normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\ChainTexture_Normal.tga",
+        "uuid": "9b6e5846-f51c-47cf-82da-1b0407dfba27",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Bricks_a_Albedo",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Bricks_a_Albedo.tga",
+        "uuid": "ab3aa73e-ee04-4cea-81eb-1942eaba4156",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Thorn_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Thorn_diffuse.tga",
+        "uuid": "38cc283e-d6c1-4ece-a545-a7d285cb7260",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Tonemap Post-Processing",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\tonemap.glsl",
+        "uuid": "30e9223e-1753-4a7a-acac-8488c75bb1ef",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Fabric Blue",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "130a033e-4504-4322-8058-cf8a982d0aec",
+        "assetType": "Material"
+    },
+    {
+        "name": "VasePlant_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VasePlant_normal.tga",
+        "uuid": "864f1b3d-8d24-417a-8181-94159c149ab4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "VaseRound_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseRound_diffuse.tga",
+        "uuid": "8aaa283c-0c81-4079-bfec-aa39d23237a4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "ibl_brdf_lut",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\ibl_brdf_lut.png",
+        "uuid": "7707483a-9379-4e81-9e15-0e5acf20e9d6",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Floor_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Floor_diffuse.tga",
+        "uuid": "d921d439-32aa-401c-aef3-46e2e3c916d5",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Metallic_metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Metallic_metallic.tga",
+        "uuid": "cdb0b135-e4c4-4cde-b1b6-c9855086a345",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Curtain_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_roughness.tga",
+        "uuid": "84b49335-8b90-404d-90c7-6931fc4a0aeb",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Details_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Details_roughness.tga",
+        "uuid": "29bd0b35-8918-4c87-be33-db4d191a83c0",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Skybox (Cubemap)",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\shaders\\skybox.glsl",
+        "uuid": "60532933-a423-4e08-a23d-b81ee3631782",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Background_Albedo",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Background_Albedo.tga",
+        "uuid": "0f856b32-d597-4ed4-929d-b303039465c4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Thorn_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Thorn_normal.tga",
+        "uuid": "dce49c2d-a6b3-4eba-a9bc-358af3988708",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Skybox",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\skybox.gmat",
+        "uuid": "cead2f2d-49e4-4265-acc0-4c1a1e0f7ba4",
+        "assetType": "Material"
+    },
+    {
+        "name": "Sponza_Bricks_a_Roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Bricks_a_Roughness.tga",
+        "uuid": "8e450f2c-3b9e-4612-85bf-e0014ffd58f7",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Directional Light",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\directionalLight.glsl",
+        "uuid": "94dcc829-3b58-45fb-809a-6800a23eab45",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Sponza_Details_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Details_diffuse.tga",
+        "uuid": "22651229-fbb0-44d5-9eb0-b8642eda046e",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Roof",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "c3b37926-bfb1-4961-bb30-37167934404c",
+        "assetType": "Material"
+    },
+    {
+        "name": "Point Light",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\coreAssets\\pointLight.glsl",
+        "uuid": "5537b925-96bc-4e1f-8e2a-d66d6dd9bed1",
+        "assetType": "Shader"
+    },
+    {
+        "name": "Bricks",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "4ccc2824-1307-4ca8-9cf5-eb680f08f8ac",
+        "assetType": "Material"
+    },
+    {
+        "name": "VaseRound_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseRound_roughness.tga",
+        "uuid": "c5048d22-72d4-41b5-8733-a92bd7389e8d",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_FlagPole_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_FlagPole_diffuse.tga",
+        "uuid": "843c4821-e0ac-4af5-beba-b8a9683a8775",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_FlagPole_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_FlagPole_normal.tga",
+        "uuid": "5fe16220-aa12-4098-8f6f-799f7bc1038b",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Lion",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "d95f691e-4d49-4f1c-9687-3748a12e79c3",
+        "assetType": "Material"
+    },
+    {
+        "name": "VaseRound_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\VaseRound_normal.tga",
+        "uuid": "4561501c-276f-428a-927f-e41bc2e66ec4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Fabric_Blue_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Fabric_Blue_diffuse.tga",
+        "uuid": "bb347a18-d0d2-4450-8894-2654a39c4034",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Curtain_Green_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_Green_diffuse.tga",
+        "uuid": "b7199e17-4294-4b2d-a27f-64478b370842",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Curtain_metallic",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Curtain_metallic.tga",
+        "uuid": "15b27813-ebf9-45b3-8ae3-c766cec0cda8",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Roof_roughness",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Roof_roughness.tga",
+        "uuid": "bc1d0d12-af5b-43ca-a470-7383fb770dcb",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza_Roof_diffuse",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Roof_diffuse.tga",
+        "uuid": "c9daf20a-3241-468f-abff-ed06c9d609b6",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Lion_Albedo",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Lion_Albedo.tga",
+        "uuid": "b9cadd0a-7622-4800-9e49-1324172c0cde",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Fabric Green",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "e9852309-29cb-4ec6-bfb2-f5331a11b939",
+        "assetType": "Material"
+    },
+    {
+        "name": "SkyboxCubemap",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\SkyboxCubemap.png",
+        "uuid": "5331ba08-cb9c-4e62-a596-be90b2a90ab0",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Transparent Shader",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\shaders\\transparent.glsl",
+        "uuid": "e39fcc07-4eb6-4e17-8150-2937c9f20d80",
+        "assetType": "Shader"
+    },
+    {
+        "name": "gi_flag",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\gi_flag.tga",
+        "uuid": "d8fa8007-a3b0-42ab-9035-e188fedfffa4",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Sponza",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
+        "assetType": "Mesh3d"
+    },
+    {
+        "name": "Sponza_Column_b_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Sponza_Column_b_normal.tga",
+        "uuid": "3b8f4c07-e8cf-4bcd-b325-8b8e31d35aeb",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Curtain Green",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "e6391407-a0ba-41ff-aacd-aeda870fc1ac",
+        "assetType": "Material"
+    },
+    {
+        "name": "Leaves",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\Sponza.fbx",
+        "uuid": "69ec0502-7ff9-4612-a9e8-b2446643e89c",
+        "assetType": "Material"
+    },
+    {
+        "name": "Vase_normal",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\art\\environments\\crytek-sponza\\textures_pbr\\Vase_normal.tga",
+        "uuid": "32ca6c01-2f04-497c-ad85-72696e58b36d",
+        "assetType": "Texture"
+    },
+    {
+        "name": "Transparent Shader",
+        "path": "D:\\Work\\InOrdinate\\Sandbox\\assets\\shaders\\transparent.glsl",
+        "uuid": "00000000-0000-0000-0000-000000000000",
+        "assetType": "Shader"
+    }
+]

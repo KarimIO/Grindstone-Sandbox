@@ -3,7 +3,7 @@
     "defaultUuid": "790cc3a4-cfba-481e-b2c3-afd9e4def7ac",
     "subassets": [
         {
-            "name": "texture",
+            "name": "VasePlant_roughness",
             "uuid": "790cc3a4-cfba-481e-b2c3-afd9e4def7ac",
             "type": "Texture"
         }

@@ -3,7 +3,7 @@
     "defaultUuid": "6fb7ff53-8046-4c0a-be52-255609823253",
     "subassets": [
         {
-            "name": "texture",
+            "name": "ChainTexture_Roughness",
             "uuid": "6fb7ff53-8046-4c0a-be52-255609823253",
             "type": "Texture"
         }

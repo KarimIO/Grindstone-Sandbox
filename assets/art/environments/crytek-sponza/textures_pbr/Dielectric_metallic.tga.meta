@@ -3,7 +3,7 @@
     "defaultUuid": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
     "subassets": [
         {
-            "name": "texture",
+            "name": "Dielectric_metallic",
             "uuid": "6fc23c70-343d-42a6-a952-3b3ce49d0751",
             "type": "Texture"
         }
