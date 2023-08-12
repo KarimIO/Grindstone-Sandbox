@@ -14,7 +14,7 @@
 					"component": "Transform",
 					"params": {
 						"position": [
-							0,
+							-22,
 							2,
 							0
 						]
@@ -116,7 +116,8 @@
 							0.8
 						],
 						"attenuationRadius": 40,
-						"intensity": 80
+						"intensity": 80,
+						"shadowResolution": 600.0
 					}
 				}
 			]
@@ -149,9 +150,9 @@
 							0.3
 						],
 						"attenuationRadius": 15.0,
-						"intensity": 80,
-						"innerAngle": 0.2,
-						"outerAngle": 0.8,
+						"intensity": 160,
+						"innerAngle": 10,
+						"outerAngle": 30,
 						"shadowResolution": 600.0
 					}
 				}
