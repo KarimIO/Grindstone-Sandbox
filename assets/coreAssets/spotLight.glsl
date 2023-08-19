@@ -206,7 +206,6 @@ void main() {
 
 	position.y += 1.0f;
 	
-	position.y += 1.0f;
 	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
     vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
     float pixelDepth = projCoords.z;
