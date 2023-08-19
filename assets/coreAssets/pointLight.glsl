@@ -142,16 +142,9 @@ void main() {
 	vec3 position = texture(gbuffer0, fragmentTexCoord).rgb;
 	vec3 diffuse = texture(gbuffer1, fragmentTexCoord).rgb;
 	vec3 normal = texture(gbuffer2, fragmentTexCoord).rgb;
-	// float depth = texture(gbuffer4, fragmentTexCoord).r;
 	vec3 specular = gbuffer3Value.rgb;
 	float roughness = gbuffer3Value.a;
-
-	/*float near = 0.1;
-	float far = 100;
-	float projectionA = far / (far - near);
-	float projectionB = (-far * near) / (far - near);
-	vec3 position = fragmentViewRay * depth;*/
-
+	
 	vec3 lightPow = light.color * light.intensity;
 	vec3 litValues = LightPointCalc(diffuse, position, specular, roughness, normal, light.position, light.attenuationRadius, lightPow, ubo.eyePos);
 

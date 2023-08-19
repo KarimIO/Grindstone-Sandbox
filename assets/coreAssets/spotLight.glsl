@@ -181,9 +181,9 @@ void main() {
 	vec3 lightDir = normalize(position - light.position);
 	vec3 lightDirection = light.direction;
 
-	float maxDot = cos(light.innerAngle);
-	float minDot = cos(light.outerAngle);
-	float diffDot = maxDot - minDot;
+	float maxDot = light.innerAngle;
+	float minDot = light.outerAngle;
+	float diffDot = max(maxDot - minDot, 0.001f);
 	float dotPR = dot(lightDir, lightDirection);
 	dotPR = clamp((dotPR - minDot) / diffDot, 0, 1);
 
@@ -203,6 +203,8 @@ void main() {
 	);
 
 	float nl = dot(lightDirection, normal);
+
+	position.y += 1.0f;
 	
 	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
     vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;

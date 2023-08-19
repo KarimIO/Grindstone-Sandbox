@@ -62,6 +62,6 @@ void main() {
 	vec3 tonemapped = hdrTransform(sceneColor + bloomColor);
 	vec3 srgb = linearToSRGB(tonemapped);
 
-	outColor = vec4(sceneColor, 1);
+	outColor = vec4(srgb, 1);
 }
 #endShaderModule
