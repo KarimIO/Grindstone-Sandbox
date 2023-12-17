@@ -170,15 +170,15 @@
 				{
 					"component": "Transform",
 					"params": {
-						"rotation": [ -0.738, 0, 0, 0.78 ]
+						"rotation": [ -0.334, -0.635, 0.453, -0.529 ]
 					}
 				},
 				{
 					"component": "DirectionalLight",
 					"params": {
-						"color": [ 1, 0.6, 0.3 ],
+						"color": [ 1, 1, 1 ],
 						"sourceRadius": 40,
-						"intensity": 10,
+						"intensity": 7,
 						"shadowResolution": 2048.0
 					}
 				}

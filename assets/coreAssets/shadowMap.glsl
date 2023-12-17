@@ -1,4 +1,5 @@
 #name Shadow Mapping
+#cullMode None
 #renderQueue Lighting
 #shaderModule vertex
 #version 450

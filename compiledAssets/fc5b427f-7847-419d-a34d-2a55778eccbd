@@ -3,7 +3,7 @@
     "geometryRenderer": "",
     "renderQueue": "Lighting",
     "transparencyMode": "",
-    "cullMode": "",
+    "cullMode": "None",
     "shaderModules": [
         "vertex",
         "fragment"

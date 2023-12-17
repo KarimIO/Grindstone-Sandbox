@@ -234,6 +234,12 @@
         "assetType": "Texture"
     },
     {
+        "name": "Shadow Mapping",
+        "path": "coreAssets/shadowMap.glsl",
+        "uuid": "fc5b427f-7847-419d-a34d-2a55778eccbd",
+        "assetType": "Shader"
+    },
+    {
         "name": "Arch",
         "path": "art/environments/crytek-sponza/Sponza.fbx",
         "uuid": "59339279-0493-4041-8c78-6899da8e4000",
