@@ -14,8 +14,13 @@ public class Player : Grindstone.SmartComponent
 
     #region Event Methods
     public override void OnUpdate() {
+        if (isFirstFrame)
+        {
+            Grindstone.Input.InputManager.CursorMode = Grindstone.Input.CursorMode.Disabled;
+            Grindstone.Input.InputManager.IsMouseRawMotion = true;
+        }
+
         bool isWindowFocused = Grindstone.Input.InputManager.IsWindowFocused;
-        Grindstone.Input.InputManager.IsCursorVisible = !isWindowFocused;
         if (!isWindowFocused)
         {
             return;
@@ -45,6 +50,7 @@ public class Player : Grindstone.SmartComponent
         bool s = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.S);
         bool a = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.A);
         bool d = Grindstone.Input.InputManager.IsKeyDown(Grindstone.Input.KeyboardKey.D);
+
         float fwd = (w ? 1.0f : 0.0f) - (s ? 1.0f : 0.0f);
         float rgt = (d ? 1.0f : 0.0f) - (a ? 1.0f : 0.0f);
         var transf = entity.GetTransformComponent();
@@ -57,18 +63,18 @@ public class Player : Grindstone.SmartComponent
 
         float mouseSensitivity = 20.0f;
         lookEuler.pitch += mouseSensitivity * lookVec.x * dt;
-        lookEuler.roll += mouseSensitivity * lookVec.y * dt;
+        lookEuler.yaw += mouseSensitivity * lookVec.y * dt;
 
         const float maxViewAngle = (float)Math.PI * 0.45f;
 
-        if (lookEuler.roll > maxViewAngle)
+        if (lookEuler.yaw > maxViewAngle)
         {
-            lookEuler.roll = maxViewAngle;
+            lookEuler.yaw = maxViewAngle;
         }
 
-        if (lookEuler.roll < -maxViewAngle)
+        if (lookEuler.yaw < -maxViewAngle)
         {
-            lookEuler.roll = -maxViewAngle;
+            lookEuler.yaw = -maxViewAngle;
         }
 
         transf.Rotation = new Quaternion(lookEuler);
