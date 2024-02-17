@@ -1,6 +1,6 @@
 # Compiled Content (Included for now)
-# /[Cc]ompiled[Aa]ssets/
-# /[Bb]in/
+/[Cc]ompiled[Aa]ssets/
+/[Bb]in/
 
 # User Files
 /[Uu]ser[Ss]ettings/
