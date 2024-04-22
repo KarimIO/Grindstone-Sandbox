@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "a3b3ed95-0701-4e67-a56f-2357b89b436d",
+    "subassets": [
+        {
+            "name": "New Material",
+            "uuid": "a3b3ed95-0701-4e67-a56f-2357b89b436d",
+            "type": "Material"
+        }
+    ]
+}

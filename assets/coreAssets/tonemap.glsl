@@ -5,67 +5,61 @@
 
 layout(location = 0) in vec2 vertexPosition;
 
-layout(location = 0) out vec3 fragmentTexCoord;
-layout(location = 1) out vec2 fragmentTexCoordDot;
+layout(location = 0) out vec2 fragmentTexCoord;
+layout(location = 1) out vec2 scaledFragmentTexCoord;
 
 layout(binding = 1) uniform sampler2D litSceneTexture;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
 	vec3 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
 void main() {
-	// TODO: Move these to uniform bufer
-	// Lens distortion params
-
-	vec2 resolution = textureSize(litSceneTexture, 0).xy;
-
-	const float strength = 0.5f;			// s: 0 = perspective, 1 = stereographic
-	const float height = tan(45.0f / 2.0f);			// h: tan(verticalFOVInRadians / 2)
-	float aspectRatio = resolution.x / resolution.y;		// a: screenWidth / screenHeight
-	const float cylindricalRatio = 0.5f;	// c: cylindrical distortion ratio. 1 = spherical
-
-
 	gl_Position = vec4(vertexPosition, 0.0, 1.0);
-	vec2 uv = (vertexPosition * 0.5f) + vec2(0.5f);
-	
-	{
-		float scaledHeight = strength * height;
-		float cylAspectRatio = aspectRatio * cylindricalRatio;
-		float aspectDiagSq = aspectRatio * aspectRatio + 1.0;
-		float diagSq = scaledHeight * scaledHeight * aspectDiagSq;
-		vec2 signedUV = (2.0 * uv + vec2(-1.0, -1.0));
-
-		float z = 0.5 * sqrt(diagSq + 1.0) + 0.5;
-		float ny = (z - 1.0) / (cylAspectRatio * cylAspectRatio + 1.0);
-
-		fragmentTexCoordDot = sqrt(ny) * vec2(cylAspectRatio, 1.0) * signedUV;
-		fragmentTexCoord = vec3(0.5, 0.5, 1.0) * z + vec3(-0.5, -0.5, 0.0);
-		fragmentTexCoord.xy += uv;
-	}
-
-	// This was used for reconstructing position from depth
-	// vec3 positionVS = vec4(gl_Position * inverse(ubo.proj)).xyz;
-	// fragmentViewRay = vec3(positionVS.xy / positionVS.z, 1.0f);
+	fragmentTexCoord = ((vertexPosition * 0.5f) + vec2(0.5f));
+	scaledFragmentTexCoord = fragmentTexCoord * ubo.renderScale;
 }
 #endShaderModule
 #shaderModule fragment
 #version 450
 
-layout(location = 0) in vec3 fragmentTexCoord;
-layout(location = 1) in vec2 fragmentTexCoordDot;
+layout(location = 0) in vec2 fragmentTexCoord;
+layout(location = 1) in vec2 scaledFragmentTexCoord;
+
 layout(location = 0) out vec4 outColor;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
 	vec3 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
 layout(binding = 1) uniform sampler2D litSceneTexture;
 layout(binding = 2) uniform sampler2D bloomTexture;
+layout(binding = 3) uniform sampler2D depthTexture;
+
+layout(std140, binding = 4) uniform PostProcessUbo {
+	vec4 vignetteColor;
+	float vignetteRadius;
+	float vignetteSoftness;
+	float grainAmount;
+	float grainPixelSize;
+	vec2 chromaticDistortionRedOffset;
+	vec2 chromaticDistortionGreenOffset;
+	vec2 chromaticDistortionBlueOffset;
+	float paniniDistortionStrength;
+	bool isAnimated;
+} postProcessingUbo;
 
 vec3 linearToSRGB(vec3 inColor) {
 	vec3 outColor;
@@ -86,50 +80,105 @@ vec3 hdrTransform(vec3 color) {
 }
 
 vec3 applyVignette(vec3 color, vec2 screenOffset) {
+	float radius = postProcessingUbo.vignetteRadius;
 	float distanceFromCenter = length(screenOffset);
+	float vignette = smoothstep(radius, radius - postProcessingUbo.vignetteSoftness, distanceFromCenter);
 
-	float radius = 1.6f;
-	float softness = 0.8f;
-	float vignette = smoothstep(radius, radius - softness, distanceFromCenter);
-
-	return color * clamp(vignette, 0, 1);
+	return mix(postProcessingUbo.vignetteColor.rgb, color, clamp(vignette, 0, 1));
 }
 
-vec2 redOffset   = vec2( 0.009);
-vec2 greenOffset = vec2( 0.006);
-vec2 blueOffset  = vec2(-0.006);
-
 vec3 applyChromaticAbberation(sampler2D colorTexture, vec2 texCoord, vec2 direction) {
-	float chromaticAbberationStrength = 0.5f;
-	vec2 directionWithStrength = direction * chromaticAbberationStrength;
-
 	vec3 color = vec3(0.0f);
-	color.r  = texture(colorTexture, texCoord + (directionWithStrength * redOffset)).r;
-	color.g  = texture(colorTexture, texCoord + (directionWithStrength * greenOffset)).g;
-	color.b = texture(colorTexture, texCoord + (directionWithStrength * blueOffset)).b;
+	color.r  = texture(colorTexture, texCoord + (direction * postProcessingUbo.chromaticDistortionRedOffset)).r;
+	color.g  = texture(colorTexture, texCoord + (direction * postProcessingUbo.chromaticDistortionGreenOffset)).g;
+	color.b = texture(colorTexture, texCoord + (direction * postProcessingUbo.chromaticDistortionBlueOffset)).b;
 
 	return color;
 }
 
-void main() {
-	// TODO: Lens distortion here
-	// vec2 texCoordToSample = fragmentTexCoord;
-	// texCoordToSample = distortUV(texCoordToSample);
-	vec2 texCoordToSample = (dot(fragmentTexCoordDot, fragmentTexCoordDot) * vec3(-0.5, -0.5, -1.0) + fragmentTexCoord).xy;
+vec3 applyGrain(vec3 originalColor, vec2 resolution, vec2 texCoord) {
+	float time = postProcessingUbo.isAnimated
+		? ubo.time * 8000.0f
+		: 0.0f;
+	vec2 noiseCoords = ivec2(texCoord * resolution / postProcessingUbo.grainPixelSize) / resolution;
+	float noise = (fract(sin(dot(noiseCoords + time, vec2(12.9898, 78.233))) * 43758.5453) - 0.5) * 2.0;
+	return originalColor + noise * postProcessingUbo.grainAmount;
+}
 
-	vec2 resolution = textureSize(litSceneTexture, 0).xy;
-	vec2 screenOffset = (texCoordToSample) - vec2(0.5f);
-	screenOffset = screenOffset * 2.0f * (resolution.x / resolution.y);
+const float Pi = 3.14159265359;
+const float Pi05 = Pi * 0.5;
+
+float Pow2(float val) {
+	return val*val;
+}
+
+/* http://tksharpless.net/vedutismo/Pannini/panini.pdf */
+vec3 paniniProjection(vec2 texCoord, float fov) {
+	float distortionStrength = postProcessingUbo.paniniDistortionStrength;
+	float distortionStrength2 = distortionStrength*distortionStrength;
+
+	{
+		float fo = Pi05 - fov * 0.5;
+
+		float f = cos(fo) / sin(fo) * 2.0;
+		float f2 = f*f;
+
+		float b = (sqrt(max(0.0, Pow2(distortionStrength+distortionStrength2)*(f2+f2*f2))) - (distortionStrength*f+f)) / (distortionStrength2+distortionStrength2*f2-1.0);
+
+		texCoord *= b;
+	}
+	
+	float h = texCoord.x;
+	float v = texCoord.y;
+	
+	float h2 = h*h;
+	
+	float k = h2/Pow2(distortionStrength+1.0);
+	float k2 = k*k;
+	
+	float discriminant = max(0.0, k2 * distortionStrength2 - (k + 1.0) * (k * distortionStrength2 - 1.0));
+	
+	float cosPhi = (-k * distortionStrength + sqrt(discriminant))/(k+1.0);
+	float S = (distortionStrength+1.0)/(distortionStrength+cosPhi);
+	float tanTheta = v/S;
+	
+	float sinPhi = sqrt(max(0.0, 1.0 - cosPhi*cosPhi));
+
+	if(texCoord.x < 0.0) {
+		sinPhi *= -1.0;
+	}
+
+	float s = inversesqrt(1.0 + tanTheta*tanTheta);
+	
+	return vec3(sinPhi, tanTheta, cosPhi) * s;
+}
+
+void main() {
+	float fov = 1.5707963f / 2.0f;
+	vec2 texCoordToSample = fragmentTexCoord * 2.0f - vec2(1.0f);
+	texCoordToSample = paniniProjection(texCoordToSample, fov).xy / 2.0f + vec2(0.5f);
+
+	vec2 resolution = ubo.renderResolution;
+	float aspectRatio = resolution.x / resolution.y;
+	vec2 screenOffset = (texCoordToSample * 2.0f) - vec2(1.0f);
+	screenOffset = (aspectRatio > 1.0f)
+		? vec2(screenOffset.x / aspectRatio, screenOffset.y)
+		: vec2(screenOffset.x, screenOffset.y / aspectRatio);
+
+	if (texCoordToSample.x <= 0.0f || texCoordToSample.y <= 0.0f || texCoordToSample.x > 1.0f || texCoordToSample.y > 1.0f) {
+		outColor = vec4(0.0f, 0.0f, 1.0f, 1.0f);
+		return;
+	}
 
 	vec3 sceneColor = vec3(0.0f);
 
 	// Get color directly if not using chromatic abberation.
 	// vec3 sceneColor = texture(litSceneTexture, distortedUV).rgb;
-	sceneColor = applyChromaticAbberation(litSceneTexture, texCoordToSample, screenOffset);
+	sceneColor = applyChromaticAbberation(litSceneTexture, texCoordToSample * ubo.renderScale, screenOffset);
 
-	sceneColor = sceneColor + texture(bloomTexture, texCoordToSample).rgb;
-	// sceneColor = applyVignette(sceneColor, screenOffset);
-	// TODO: Do grain here
+	sceneColor = sceneColor + texture(bloomTexture, texCoordToSample * ubo.renderScale).rgb;
+	sceneColor = applyVignette(sceneColor, screenOffset);
+	sceneColor = applyGrain(sceneColor, resolution, fragmentTexCoord * ubo.renderScale);
 	sceneColor = hdrTransform(sceneColor);
 	sceneColor = linearToSRGB(sceneColor);
 
