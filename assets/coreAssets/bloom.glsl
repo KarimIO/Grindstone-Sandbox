@@ -5,11 +5,13 @@
 
 const float epsilon = 1.0e-4;
 
-layout(binding = 0) uniform ControlUniformBuffer {
+layout(std140, binding = 0) uniform ControlUniformBuffer {
 	vec4 thresholdFilter;
 	int stage;
 	float levelOfDetail;
 	float filterRadius;
+	vec4 inReciprocalImgSizes;
+	vec2 outReciprocalImgSize;
 } ubo;
 
 layout(binding = 1, rgba32f) restrict writeonly uniform image2D outImage;
@@ -39,7 +41,28 @@ vec3 Upsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize, float radius)
 	return result * (1.0f / 16.0f);
 }
 
-vec3 Downsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize) {
+vec3 PowVec3(vec3 v, float p) {
+    return vec3(pow(v.x, p), pow(v.y, p), pow(v.z, p));
+}
+
+const float invGamma = 1.0 / 2.2;
+vec3 ToSRGB(vec3 v) { return PowVec3(v, invGamma); }
+
+float RGBToLuminance(vec3 col) {
+    return dot(col, vec3(0.2126f, 0.7152f, 0.0722f));
+}
+
+float KarisAverage(vec3 col) {
+    // Formula is 1 / (1 + luma)
+    float luma = RGBToLuminance(ToSRGB(col)) * 0.25f;
+    return 1.0f / (1.0f + luma);
+}
+
+vec3 TransformKaris(vec3 col) {
+	return col * KarisAverage(col);
+}
+
+vec3 Downsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize, bool isFirstDownsample) {
 	texCoord += texelSize / 2.0f;
 
 	vec3 a = texture(srcTexture, texCoord + texelSize * vec2(-2.0f,-2.0f)).rgb;
@@ -65,12 +88,18 @@ vec3 Downsample(sampler2D srcTexture, vec2 texCoord, vec2 texelSize) {
     // e,f,h,i * 0.125
     // j,k,l,m * 0.5
 	
-	vec3 result = ((e) * 0.125f)
+	if (isFirstDownsample) {
+		return	  TransformKaris((e) * 0.125f)
+				+ TransformKaris((a + c + g + i) * 0.03125f)
+				+ TransformKaris((b + d + f + h) * 0.0625f)
+				+ TransformKaris((j + k + l + m) * 0.125f);
+	}
+	else {
+		return ((e) * 0.125f)
 				+ ((a + c + g + i) * 0.03125f)
 				+ ((b + d + f + h) * 0.0625f)
 				+ ((j + k + l + m) * 0.125f);
-	
-	return result;
+	}
 }
 
 vec4 Prefilter(vec4 color) {
@@ -84,30 +113,27 @@ vec4 Prefilter(vec4 color) {
 
 layout(local_size_x = 4, local_size_y = 4) in;
 void main() {
-	vec2 imgSize = vec2(imageSize(outImage));
 	ivec2 invocID = ivec2(gl_GlobalInvocationID);
-	vec2 texCoords = vec2(invocID.x / imgSize.x, invocID.y / imgSize.y);
+	vec2 texCoords = vec2(invocID.x * ubo.outReciprocalImgSize.x, invocID.y * ubo.outReciprocalImgSize.y);
 	
 	vec4 color = vec4(0.0f);
 
 	if (ubo.stage == bloomStagePrefilter) {
-		color.rgb = Downsample(inImage1, texCoords, 1.0f / imgSize);
+		color.rgb = Downsample(inImage1, texCoords, ubo.outReciprocalImgSize.xy, true);
 		color = max(Prefilter(color), 0.0f);
 		color.a = 1.0f;
 	}
 	else if (ubo.stage == bloomStageDownsample) {
-		color.rgb = Downsample(inImage1, texCoords, 1.0f / imgSize);
+		color.rgb = Downsample(inImage1, texCoords, ubo.outReciprocalImgSize.xy, false);
 	}
 	else if (ubo.stage == bloomStageUpsample) {
-		vec2 bloomTexSize = vec2(textureSize(inImage2, 0));
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, ubo.filterRadius);
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, ubo.inReciprocalImg2Size, ubo.filterRadius);
 
 		vec3 existing = texture(inImage2, texCoords).rgb;
 		color.rgb = existing + upsampledTexture;
 	}
 	else if (ubo.stage == bloomStageApply) {
-		vec2 bloomTexSize = vec2(textureSize(inImage2, 0));
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, 1.0f / bloomTexSize, ubo.filterRadius);
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, ubo.inReciprocalImg2Size, ubo.filterRadius);
 		color.rgb = upsampledTexture;
 	}
 

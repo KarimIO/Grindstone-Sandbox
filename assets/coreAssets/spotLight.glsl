@@ -6,33 +6,39 @@
 layout(location = 0) in vec2 vertexPosition;
 
 layout(location = 0) out vec2 fragmentTexCoord;
-layout(location = 1) out vec3 fragmentViewRay;
+layout(location = 1) out vec2 scaledFragmentTexCoord;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
 	vec3 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
 void main() {
 	gl_Position = vec4(vertexPosition, 0.0, 1.0);
-	fragmentTexCoord = (vertexPosition * 0.5f) + vec2(0.5f);
-
-	vec3 positionVS = vec4(gl_Position * inverse(ubo.proj)).xyz;
-	fragmentViewRay = vec3(positionVS.xy / positionVS.z, 1.0f);
+	fragmentTexCoord = ((vertexPosition * 0.5f) + vec2(0.5f));
+	scaledFragmentTexCoord = fragmentTexCoord * ubo.renderScale;
 }
 #endShaderModule
 #shaderModule fragment
 #version 450
 
 layout(location = 0) in vec2 fragmentTexCoord;
-layout(location = 1) in vec3 fragmentViewRay;
+layout(location = 1) in vec2 scaledFragmentTexCoord;
 layout(location = 0) out vec4 outColor;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
 	vec3 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
 layout(binding = 1) uniform sampler2D gbuffer0;
@@ -164,15 +170,28 @@ vec2 poissonDisk[16] = vec2[](
 
 float ShadowRandom(vec4 seed4) {
 	float dotProduct = dot(seed4, vec4(12.9898,78.233,45.164,94.673));
-    return fract(sin(dotProduct) * 43758.5453);
+	return fract(sin(dotProduct) * 43758.5453);
+}
+
+vec4 ComputeClipSpacePosition(vec2 positionNDC, float deviceDepth) {
+	vec4 positionCS = vec4(positionNDC * 2.0 - 1.0, deviceDepth, 1.0);
+
+	return positionCS;
+}
+
+vec3 ComputeWorldSpacePosition(vec2 positionNDC, float deviceDepth) {
+	vec4 positionCS  = ComputeClipSpacePosition(positionNDC, deviceDepth);
+	vec4 hpositionWS = inverse(ubo.proj * ubo.view) * positionCS;
+	return hpositionWS.xyz / hpositionWS.w;
 }
 
 void main() {
-	vec4 gbuffer3Value = texture(gbuffer3, fragmentTexCoord);
+	vec4 gbuffer3Value = texture(gbuffer3, scaledFragmentTexCoord);
 
-	vec3 position = texture(gbuffer0, fragmentTexCoord).rgb;
-	vec3 diffuse = texture(gbuffer1, fragmentTexCoord).rgb;
-	vec3 normal = texture(gbuffer2, fragmentTexCoord).rgb;
+	float depth = texture(gbuffer0, scaledFragmentTexCoord).r;
+	vec3 position = ComputeWorldSpacePosition(fragmentTexCoord, depth);
+	vec3 diffuse = texture(gbuffer1, scaledFragmentTexCoord).rgb;
+	vec3 normal = texture(gbuffer2, scaledFragmentTexCoord).rgb;
 	vec3 specular = gbuffer3Value.rgb;
 	float roughness = gbuffer3Value.a;
 
@@ -206,10 +225,10 @@ void main() {
 	
 	position.y += 1.0f;
 	vec4 lightSpacePos = light.shadowMatrix * vec4(position, 1);
-    vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
-    float pixelDepth = projCoords.z;
+	vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
+	float pixelDepth = projCoords.z;
 	
-    float closestDepth = texture(shadowMap, projCoords.xy).x;
+	float closestDepth = texture(shadowMap, projCoords.xy).x;
 
 	bool isInMap = projCoords.x >= 0 && projCoords.x <= 1 && projCoords.y >= 0 && projCoords.y <= 1 && projCoords.z >= 0 && projCoords.z <= 1;
 	bool isInLight = closestDepth >= pixelDepth;

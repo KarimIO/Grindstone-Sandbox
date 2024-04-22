@@ -6,36 +6,42 @@
 layout(location = 0) in vec2 vertexPosition;
 
 layout(location = 0) out vec2 fragmentTexCoord;
-layout(location = 1) out vec3 fragmentViewRay;
+layout(location = 1) out vec2 scaledFragmentTexCoord;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
-	vec3 eyePos;
+	vec4 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
 void main() {
 	gl_Position = vec4(vertexPosition, 0.0, 1.0);
-	fragmentTexCoord = (vertexPosition * 0.5f) + vec2(0.5f);
-
-	vec3 positionVS = vec4(gl_Position * inverse(ubo.proj)).xyz;
-	fragmentViewRay = vec3(positionVS.xy / positionVS.z, 1.0f);
+	fragmentTexCoord = ((vertexPosition * 0.5f) + vec2(0.5f));
+	scaledFragmentTexCoord = fragmentTexCoord * ubo.renderScale;
 }
 #endShaderModule
 #shaderModule fragment
 #version 450
 
 layout(location = 0) in vec2 fragmentTexCoord;
-layout(location = 1) in vec3 fragmentViewRay;
+layout(location = 1) in vec2 scaledFragmentTexCoord;
 layout(location = 0) out vec4 outColor;
 
-layout(binding = 0) uniform EngineUbo {
+layout(std140, binding = 0) uniform EngineUbo {
 	mat4 proj;
 	mat4 view;
-	vec3 eyePos;
+	vec4 eyePos;
+	vec2 framebufferResolution;
+	vec2 renderResolution;
+	vec2 renderScale;
+	float time;
 } ubo;
 
-layout(binding = 1) uniform sampler2D gbuffer0;
+layout(binding = 1) uniform sampler2D depthTexture;
 layout(binding = 2) uniform sampler2D gbuffer1;
 layout(binding = 3) uniform sampler2D gbuffer2;
 layout(binding = 4) uniform sampler2D gbuffer3;
@@ -108,17 +114,31 @@ vec3 GetIrradiance(vec3 normal) {
 	return max(result / pi, vec3(0.0));
 }
 
-void main() {
-	vec4 gbuffer3Value = texture(gbuffer3, fragmentTexCoord);
+vec4 ComputeClipSpacePosition(vec2 positionNDC, float deviceDepth) {
+	vec4 positionCS = vec4(positionNDC * 2.0 - 1.0, deviceDepth, 1.0);
 
-	vec3 position = texture(gbuffer0, fragmentTexCoord).rgb;
-	vec3 albedo = texture(gbuffer1, fragmentTexCoord).rgb;
-	vec3 normal = texture(gbuffer2, fragmentTexCoord).rgb;
+	return positionCS;
+}
+
+vec3 ComputeWorldSpacePosition(vec2 positionNDC, float deviceDepth) {
+	vec4 positionCS  = ComputeClipSpacePosition(positionNDC, deviceDepth);
+	vec4 hpositionWS = inverse(ubo.proj * ubo.view) * positionCS;
+	return hpositionWS.xyz / hpositionWS.w;
+}
+
+void main() {
+	vec4 gbuffer3Value = texture(gbuffer3, scaledFragmentTexCoord);
+
+	float depthFromTexture = texture(depthTexture, scaledFragmentTexCoord).r;
+
+	vec3 position = ComputeWorldSpacePosition(fragmentTexCoord, depthFromTexture);
+	vec3 albedo = texture(gbuffer1, scaledFragmentTexCoord).rgb;
+	vec3 normal = texture(gbuffer2, scaledFragmentTexCoord).rgb;
 	vec3 specularInput = gbuffer3Value.rgb;
 	float roughness = gbuffer3Value.a * gbuffer3Value.a;
-	float ao = texture(ssao, fragmentTexCoord).r;
+	float ao = texture(ssao, scaledFragmentTexCoord).r;
 	
-	vec3 eyeDir = normalize(ubo.eyePos - position);
+	vec3 eyeDir = normalize(ubo.eyePos.xyz - position);
 	vec3 reflectRay = 2 * dot(eyeDir, normal) * normal - eyeDir;
 	vec2 reflectUv = SampleSphericalMap(reflectRay);
 	

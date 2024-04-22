@@ -18,16 +18,14 @@ layout(location = 1) in vec3 vertexNormal;
 layout(location = 2) in vec3 vertexTangent;
 layout(location = 3) in vec2 vertexTexCoord0;
 
-layout(location = 0) out vec3 fragmentPosition;
-layout(location = 1) out vec3 fragmentNormal;
-layout(location = 2) out vec3 fragmentTangent;
-layout(location = 3) out vec2 fragmentTexCoord0;
+layout(location = 0) out vec3 fragmentNormal;
+layout(location = 1) out vec3 fragmentTangent;
+layout(location = 2) out vec2 fragmentTexCoord0;
 
 void main() {
 	vec4 posVec4 = meshUbo.model * vec4(vertexPosition, 1.0);
 	gl_Position = ubo.proj * ubo.view * posVec4;
 
-	fragmentPosition = posVec4.rgb;
 	mat3 modelMat3 = mat3(meshUbo.model);
 	fragmentNormal = modelMat3 * normalize(vertexNormal);
 	fragmentTangent = modelMat3 * normalize(vertexTangent);
@@ -46,15 +44,13 @@ layout(binding = 2) uniform sampler2D normalTexture;
 layout(binding = 3) uniform sampler2D metalnessTexture;
 layout(binding = 4) uniform sampler2D roughnessTexture;
 
-layout(location = 0) in vec3 fragmentPosition;
-layout(location = 1) in vec3 fragmentNormal;
-layout(location = 2) in vec3 fragmentTangent;
-layout(location = 3) in vec2 fragmentTexCoord0;
+layout(location = 0) in vec3 fragmentNormal;
+layout(location = 1) in vec3 fragmentTangent;
+layout(location = 2) in vec2 fragmentTexCoord0;
 
-layout(location = 0) out vec4 gbuffer0; // XYZ
-layout(location = 1) out vec4 gbuffer1; // Albedo(RGB) matID
-layout(location = 2) out vec4 gbuffer2; // Normal(XYZ)
-layout(location = 3) out vec4 gbuffer3; // Specular(RGB) Roughness
+layout(location = 0) out vec4 gbuffer0; // Albedo(RGB) matID
+layout(location = 1) out vec4 gbuffer1; // Normal(XYZ)
+layout(location = 2) out vec4 gbuffer2; // Specular(RGB) Roughness
 
 vec3 TransformNormalToWorldSpace(vec3 vertexNormalValue, vec3 normalTextureSample, vec3 vertexTangentValue) {
 	vec3 bumpMapNormal = normalTextureSample;
@@ -86,9 +82,8 @@ void main() {
 	vec3 specular = mix(vec3(0.04), albedo.rgb, metalness);
 	vec3 worldSpaceNormal = TransformNormalToWorldSpace(fragmentNormal, textureSpaceNormal, fragmentTangent);
 
-	gbuffer0 = vec4(fragmentPosition, 1);
-	gbuffer1 = albedo;
-	gbuffer2 = vec4(worldSpaceNormal, 1);
-	gbuffer3 = vec4(specular, roughness);
+	gbuffer0 = albedo;
+	gbuffer1 = vec4(worldSpaceNormal, 1);
+	gbuffer2 = vec4(specular, roughness);
 }
 #endShaderModule
