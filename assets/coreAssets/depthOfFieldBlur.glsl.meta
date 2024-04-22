@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "65b37559-4286-4351-bf3a-d61e6a688d52",
+    "subassets": [
+        {
+            "name": "Depth of Field (Blur Stage)",
+            "uuid": "65b37559-4286-4351-bf3a-d61e6a688d52",
+            "type": "Shader"
+        }
+    ]
+}

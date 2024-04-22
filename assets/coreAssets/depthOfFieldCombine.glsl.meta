@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "ca629d4c-b4ed-4da4-9c37-451034ff67cb",
+    "subassets": [
+        {
+            "name": "Depth of Field (Combine Stage)",
+            "uuid": "ca629d4c-b4ed-4da4-9c37-451034ff67cb",
+            "type": "Shader"
+        }
+    ]
+}

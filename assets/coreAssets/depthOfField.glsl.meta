@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "9cd38044-b781-4398-a0f9-3aa270701453",
+    "subassets": [
+        {
+            "name": "Depth of Field (Seperation Stage)",
+            "uuid": "9cd38044-b781-4398-a0f9-3aa270701453",
+            "type": "Shader"
+        }
+    ]
+}
