@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "b50a0ea6-d510-4f15-ba20-410ddaff3f30",
+    "subassets": [
+        {
+            "name": "Texture Decoder",
+            "uuid": "b50a0ea6-d510-4f15-ba20-410ddaff3f30",
+            "type": "Shader"
+        }
+    ]
+}
