@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "fafd3e26-3b40-4c5d-88b5-4a906810bf19",
+    "subassets": [
+        {
+            "name": "Depth of Field (Separation)",
+            "uuid": "fafd3e26-3b40-4c5d-88b5-4a906810bf19",
+            "type": "Shader"
+        }
+    ]
+}
