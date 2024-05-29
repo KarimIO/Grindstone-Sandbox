@@ -201,12 +201,28 @@ void main() {
 	vec3 projCoords = lightSpacePos.xyz / lightSpacePos.w;
 	float pixelDepth = projCoords.z;
 	
-	float closestDepth = texture(shadowMap, projCoords.xy).x + 0.05;
+	const vec2 texelSize = 1.0f / textureSize(shadowMap, 0);
+	const float pcfKernelSize = 1.0f;
+	float shadow = 0.0f;
+
+	for (int i = 0; i < 16; ++i) {
+		float randomAngle = ShadowRandom(vec4(floor(position.xyz * 1000.0f), i));
+		vec2 rotation = vec2(cos(randomAngle) * 0.5f + 0.5f, sin(randomAngle) * 0.5f + 0.5f);
+		vec2 offset = vec2(
+			rotation.x * poissonDisk[i].x - rotation.y * poissonDisk[i].y,
+			rotation.y * poissonDisk[i].x + rotation.x * poissonDisk[i].y
+		);
+ 
+		float pcfDepth = texture(shadowMap, projCoords.xy + offset * texelSize * 4.0f).r;
+		bool isInLight = pcfDepth + 0.05f >= pixelDepth;
+		shadow += isInLight ? 1.0f : 0.0f;
+	}
+
+	shadow = shadow / 16;
 
 	bool isInMap = projCoords.z >= 0 && projCoords.z <= 1;
-	bool isInLight = closestDepth >= pixelDepth;
-	float isInLightMap = (isInMap) ? 1.0f : 0.0f;
+	float isInLightMap = (isInMap) ? shadow : 0.0f;
 
-	outColor = vec4(vec3(isInLight) * litValues, 1);
+	outColor = vec4(vec3(isInLightMap) * litValues, 1);
 }
 #endShaderModule
