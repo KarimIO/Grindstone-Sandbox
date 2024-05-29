@@ -48,7 +48,7 @@ layout(binding = 4) uniform sampler2D gbuffer3;
 layout(binding = 5) uniform sampler2D gbuffer4;
 layout(set = 1, binding = 0) uniform sampler2D ssao;
 layout(set = 1, binding = 1) uniform sampler2D brdfLUT;
-layout(set = 2, binding = 0) uniform sampler2D specularMap;
+layout(set = 2, binding = 0) uniform samplerCube specularMap;
 
 const float pi = 3.14159f;
 
@@ -140,7 +140,6 @@ void main() {
 	
 	vec3 eyeDir = normalize(ubo.eyePos.xyz - position);
 	vec3 reflectRay = 2 * dot(eyeDir, normal) * normal - eyeDir;
-	vec2 reflectUv = SampleSphericalMap(reflectRay);
 	
 	float NV = max(dot(normal, eyeDir), 0.0);
 	
@@ -148,7 +147,7 @@ void main() {
 	vec3 f0 = 0.32 * specularInput * specularInput;
 	float f90 = clamp(50 * dot(f0, vec3(0.33)), 0, 1);
 	vec3 F = Light_F(f0, f90, NV);
-	vec3 prefilteredColor = textureLod(specularMap, reflectUv, roughness * MAX_REFLECTION_LOD).rgb;   
+	vec3 prefilteredColor = textureLod(specularMap, reflectRay, roughness * MAX_REFLECTION_LOD).rgb;   
 	vec2 envBRDF  = texture(brdfLUT, vec2(NV, roughness)).rg;
 	vec3 specular = prefilteredColor * (F * envBRDF.x + envBRDF.y);
 
