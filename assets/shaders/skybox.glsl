@@ -32,6 +32,6 @@ layout(location = 0) out vec4 outColor;
 layout(binding = 1) uniform samplerCube skybox;
 
 void main() {
-    outColor = pow(texture(skybox, fragCoord), vec4(2.2));
+    outColor = textureLod(skybox, fragCoord, 0);
 }
 #endShaderModule
