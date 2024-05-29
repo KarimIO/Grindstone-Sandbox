@@ -52,10 +52,6 @@ layout(binding = 1) uniform sampler2D depthTexture;
 layout(binding = 3) uniform sampler2D gbuffer2;
 layout(set = 1, binding = 1) uniform sampler2D ssaoNoise;
 
-vec3 ViewPosFromWorldPos(vec3 worldPos) {
-	return (ubo.view * vec4(worldPos, 1)).xyz;
-}
-
 vec3 ViewNormal(vec3 inNorm) {
 	return mat3(ubo.view) * normalize(inNorm);
 }

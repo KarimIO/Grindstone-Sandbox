@@ -150,9 +150,9 @@
 							0.3
 						],
 						"attenuationRadius": 15.0,
-						"intensity": 160,
-						"innerAngle": 10,
-						"outerAngle": 30,
+						"intensity": 200,
+						"innerAngle": 25,
+						"outerAngle": 50,
 						"shadowResolution": 600.0
 					}
 				}

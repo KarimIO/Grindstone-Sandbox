@@ -160,25 +160,27 @@ void main() {
 
 	vec2 resolution = ubo.renderResolution;
 	float aspectRatio = resolution.x / resolution.y;
-	vec2 screenOffset = (texCoordToSample * 2.0f) - vec2(1.0f);
-	screenOffset = (aspectRatio > 1.0f)
-		? vec2(screenOffset.x / aspectRatio, screenOffset.y)
-		: vec2(screenOffset.x, screenOffset.y / aspectRatio);
 
 	if (texCoordToSample.x <= 0.0f || texCoordToSample.y <= 0.0f || texCoordToSample.x > 1.0f || texCoordToSample.y > 1.0f) {
 		outColor = vec4(0.0f, 0.0f, 1.0f, 1.0f);
 		return;
 	}
+	
+	vec2 screenOffset = texCoordToSample;
+	screenOffset = (screenOffset * 2.0f) - vec2(1.0f);
+	screenOffset = (aspectRatio > 1.0f)
+		? vec2(screenOffset.x / aspectRatio, screenOffset.y)
+		: vec2(screenOffset.x, screenOffset.y / aspectRatio);
 
 	vec3 sceneColor = vec3(0.0f);
 
 	// Get color directly if not using chromatic abberation.
 	// vec3 sceneColor = texture(litSceneTexture, distortedUV).rgb;
-	sceneColor = applyChromaticAbberation(litSceneTexture, texCoordToSample * ubo.renderScale, screenOffset);
+	sceneColor = applyChromaticAbberation(litSceneTexture, texCoordToSample * ubo.renderScale, screenOffset * screenOffset);
 
-	sceneColor = sceneColor + texture(bloomTexture, texCoordToSample * ubo.renderScale).rgb;
+	sceneColor = sceneColor + texture(bloomTexture, texCoordToSample * ubo.renderScale * 2).rgb;
 	sceneColor = applyVignette(sceneColor, screenOffset);
-	sceneColor = applyGrain(sceneColor, resolution, fragmentTexCoord * ubo.renderScale);
+	sceneColor = applyGrain(sceneColor, resolution, fragmentTexCoord);
 	sceneColor = hdrTransform(sceneColor);
 	sceneColor = linearToSRGB(sceneColor);
 
