@@ -6,12 +6,11 @@
 const float epsilon = 1.0e-4;
 
 layout(std140, binding = 0) uniform ControlUniformBuffer {
+	vec4 reciprocalImgSizes; // Consists of  vec2 in; vec2 out;
 	vec4 thresholdFilter;
 	int stage;
 	float levelOfDetail;
 	float filterRadius;
-	vec4 inReciprocalImgSizes;
-	vec2 outReciprocalImgSize;
 } ubo;
 
 layout(binding = 1, rgba32f) restrict writeonly uniform image2D outImage;
@@ -114,27 +113,26 @@ vec4 Prefilter(vec4 color) {
 layout(local_size_x = 4, local_size_y = 4) in;
 void main() {
 	ivec2 invocID = ivec2(gl_GlobalInvocationID);
-	vec2 texCoords = vec2(invocID.x * ubo.outReciprocalImgSize.x, invocID.y * ubo.outReciprocalImgSize.y);
+	vec2 texCoords = vec2(invocID.x * ubo.reciprocalImgSizes.z, invocID.y * ubo.reciprocalImgSizes.w);
 	
 	vec4 color = vec4(0.0f);
 
 	if (ubo.stage == bloomStagePrefilter) {
-		color.rgb = Downsample(inImage1, texCoords, ubo.outReciprocalImgSize.xy, true);
+		color.rgb = Downsample(inImage1, texCoords, ubo.reciprocalImgSizes.zw, true);
 		color = max(Prefilter(color), 0.0f);
 		color.a = 1.0f;
 	}
 	else if (ubo.stage == bloomStageDownsample) {
-		color.rgb = Downsample(inImage1, texCoords, ubo.outReciprocalImgSize.xy, false);
+		color.rgb = Downsample(inImage1, texCoords, ubo.reciprocalImgSizes.zw, false);
 	}
 	else if (ubo.stage == bloomStageUpsample) {
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, ubo.inReciprocalImg2Size, ubo.filterRadius);
-
+		vec3 upsampledTexture = Upsample(inImage1, texCoords, ubo.reciprocalImgSizes.xy, ubo.filterRadius);
+		
 		vec3 existing = texture(inImage2, texCoords).rgb;
 		color.rgb = existing + upsampledTexture;
 	}
 	else if (ubo.stage == bloomStageApply) {
-		vec3 upsampledTexture = Upsample(inImage1, texCoords, ubo.inReciprocalImg2Size, ubo.filterRadius);
-		color.rgb = upsampledTexture;
+		color.rgb = Upsample(inImage1, texCoords, ubo.reciprocalImgSizes.xy, ubo.filterRadius);
 	}
 
 	imageStore(outImage, invocID, color);
