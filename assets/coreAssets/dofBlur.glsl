@@ -21,7 +21,7 @@ layout(std140, binding = 0) uniform EngineUbo {
 void main() {
 	gl_Position = vec4(vertexPosition, 0.0, 1.0);
 	fragmentTexCoord = ((vertexPosition * 0.5f) + vec2(0.5f));
-	scaledFragmentTexCoord = fragmentTexCoord * ubo.renderScale; 
+	scaledFragmentTexCoord = fragmentTexCoord * ubo.renderScale * 4; 
 }
 #endShaderModule
 #shaderModule fragment
@@ -40,6 +40,7 @@ layout(std140, binding = 0) uniform EngineUbo {
 layout(set = 1, binding = 0) uniform sampler2D unblurredTexture;
 
 layout(location = 0) in vec2 fragmentTexCoord;
+layout(location = 1) in vec2 scaledFragmentTexCoord;
 layout(location = 0) out vec4 outBlurredTexture;
 
 vec2 unitSquareToUnitDiskPolar(vec2 inCoord)
@@ -75,12 +76,15 @@ vec2 squareToPolygonMapping(vec2 uv, float edgeCount, float shapeRotation)
 
 void main()
 {
-    float coc01 = texture(unblurredTexture, fragmentTexCoord).w;
+    vec4 unblurred = texture(unblurredTexture, scaledFragmentTexCoord);
+    
+    float coc01 = unblurred.w;
     if (coc01 == 0.0)
     {
         discard;
     }
-    float cocPixels = (coc01 * 1.0) * float(textureSize(unblurredTexture, 0).x);
+    
+    float cocPixels = (coc01 * 32.0) / ubo.renderResolution.x;
     vec3 blurredColor = vec3(0.0);
     float numTapsInAxisFloat = 4.0;
     for (uint x = 0u; x < 4u; x++)
@@ -92,9 +96,9 @@ void main()
             float param_1 = 6.0;
             float param_2 = 0.0;
             vec2 sampleCoord = squareToPolygonMapping(param, param_1, param_2);
-            blurredColor += texture(unblurredTexture, fragmentTexCoord + (sampleCoord * cocPixels)).xyz;
+            blurredColor += texture(unblurredTexture, scaledFragmentTexCoord + (sampleCoord * cocPixels)).xyz;
         }
     }
-    outBlurredTexture = vec4((blurredColor / vec3(numTapsInAxisFloat)) * numTapsInAxisFloat, coc01);
+    outBlurredTexture = vec4(blurredColor / 16.0, coc01);
 }
 #endShaderModule
