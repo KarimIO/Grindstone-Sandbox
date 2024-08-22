@@ -15,6 +15,9 @@ layout(set = 2, binding = 0) uniform MeshUbo {
 } meshUbo;
 
 layout(location = 0) in vec3 vertexPosition;
+layout(location = 1) in vec3 vertexNormal; // Unused
+layout(location = 2) in vec3 vertexTangent; // Unused
+layout(location = 3) in vec2 vertexTexCoord0; // Unused
 layout(location = 0) out vec3 fragCoord;
 
 void main() {
