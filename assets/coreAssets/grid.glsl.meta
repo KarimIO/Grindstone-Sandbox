@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "defaultUuid": "49d8949b-11f9-419f-a963-60dccf89cffc",
+    "subassets": [
+        {
+            "name": "Gizmo Shader",
+            "uuid": "49d8949b-11f9-419f-a963-60dccf89cffc",
+            "type": "Shader"
+        }
+    ]
+}
