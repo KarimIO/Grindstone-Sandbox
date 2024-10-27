@@ -1,4 +1,4 @@
-#name Test Shader
+#name Default Lit Opaque
 #renderQueue Opaque
 #geometryRenderer Mesh3d
 #shaderModule vertex

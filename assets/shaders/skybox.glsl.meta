@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "60532933-a423-4e08-a23d-b81ee3631782",
     "subassets": [
         {
-            "name": "Skybox (Cubemap)",
+            "displayName": "Skybox (Cubemap)",
+            "address": "",
+            "subassetIdentifier": "Skybox (Cubemap)",
             "uuid": "60532933-a423-4e08-a23d-b81ee3631782",
             "type": "Shader"
         }

@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "9c67849f-76d0-403a-b088-1b60dcf448f7",
     "subassets": [
         {
-            "name": "Skybox (Spherical Map)",
+            "displayName": "Skybox (Spherical Map)",
+            "address": "",
+            "subassetIdentifier": "Skybox (Spherical Map)",
             "uuid": "9c67849f-76d0-403a-b088-1b60dcf448f7",
             "type": "Shader"
         }

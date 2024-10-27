@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "e39fcc07-4eb6-4e17-8150-2937c9f20d80",
     "subassets": [
         {
-            "name": "Transparent Shader",
+            "displayName": "Transparent Shader",
+            "address": "",
+            "subassetIdentifier": "Transparent Shader",
             "uuid": "e39fcc07-4eb6-4e17-8150-2937c9f20d80",
             "type": "Shader"
         }
