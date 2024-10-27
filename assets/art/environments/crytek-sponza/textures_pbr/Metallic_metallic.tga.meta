@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "cdb0b135-e4c4-4cde-b1b6-c9855086a345",
     "subassets": [
         {
-            "name": "Metallic_metallic",
+            "displayName": "Metallic_metallic",
+            "address": "",
+            "subassetIdentifier": "Metallic_metallic",
             "uuid": "cdb0b135-e4c4-4cde-b1b6-c9855086a345",
             "type": "Texture"
         }

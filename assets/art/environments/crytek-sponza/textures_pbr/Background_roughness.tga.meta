@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "4c3f7246-9262-4687-bd61-02e8bea3bb45",
     "subassets": [
         {
-            "name": "Background_Roughness",
+            "displayName": "Background_Roughness",
+            "address": "",
+            "subassetIdentifier": "Background_Roughness",
             "uuid": "4c3f7246-9262-4687-bd61-02e8bea3bb45",
             "type": "Texture"
         }

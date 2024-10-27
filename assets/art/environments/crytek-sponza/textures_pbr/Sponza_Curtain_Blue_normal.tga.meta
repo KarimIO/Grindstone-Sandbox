@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "0258644d-49ce-4ef1-a362-a5e878ff40e7",
     "subassets": [
         {
-            "name": "Sponza_Curtain_Blue_normal",
+            "displayName": "Sponza_Curtain_Blue_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Curtain_Blue_normal",
             "uuid": "0258644d-49ce-4ef1-a362-a5e878ff40e7",
             "type": "Texture"
         }

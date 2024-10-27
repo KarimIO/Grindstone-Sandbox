@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "1c2cab83-77e5-4053-a64a-bc8530b7d8c1",
     "subassets": [
         {
-            "name": "Sponza_FlagPole_roughness",
+            "displayName": "Sponza_FlagPole_roughness",
+            "address": "",
+            "subassetIdentifier": "Sponza_FlagPole_roughness",
             "uuid": "1c2cab83-77e5-4053-a64a-bc8530b7d8c1",
             "type": "Texture"
         }

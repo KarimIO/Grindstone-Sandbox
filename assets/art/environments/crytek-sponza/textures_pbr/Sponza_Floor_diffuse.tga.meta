@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "d921d439-32aa-401c-aef3-46e2e3c916d5",
     "subassets": [
         {
-            "name": "Sponza_Floor_diffuse",
+            "displayName": "Sponza_Floor_diffuse",
+            "address": "",
+            "subassetIdentifier": "Sponza_Floor_diffuse",
             "uuid": "d921d439-32aa-401c-aef3-46e2e3c916d5",
             "type": "Texture"
         }

@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "f398a84f-334d-4fa1-9db5-1da45a7ac5f2",
     "subassets": [
         {
-            "name": "Sponza_Arch_normal",
+            "displayName": "Sponza_Arch_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Arch_normal",
             "uuid": "f398a84f-334d-4fa1-9db5-1da45a7ac5f2",
             "type": "Texture"
         }

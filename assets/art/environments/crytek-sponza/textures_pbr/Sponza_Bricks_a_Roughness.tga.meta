@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "8e450f2c-3b9e-4612-85bf-e0014ffd58f7",
     "subassets": [
         {
-            "name": "Sponza_Bricks_a_Roughness",
+            "displayName": "Sponza_Bricks_a_Roughness",
+            "address": "",
+            "subassetIdentifier": "Sponza_Bricks_a_Roughness",
             "uuid": "8e450f2c-3b9e-4612-85bf-e0014ffd58f7",
             "type": "Texture"
         }

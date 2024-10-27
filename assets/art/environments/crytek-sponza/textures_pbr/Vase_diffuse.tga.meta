@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "6d78f167-4155-421a-925b-3ca4a38531b6",
     "subassets": [
         {
-            "name": "Vase_diffuse",
+            "displayName": "Vase_diffuse",
+            "address": "",
+            "subassetIdentifier": "Vase_diffuse",
             "uuid": "6d78f167-4155-421a-925b-3ca4a38531b6",
             "type": "Texture"
         }

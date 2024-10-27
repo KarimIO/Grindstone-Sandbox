@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "dce49c2d-a6b3-4eba-a9bc-358af3988708",
     "subassets": [
         {
-            "name": "Sponza_Thorn_normal",
+            "displayName": "Sponza_Thorn_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Thorn_normal",
             "uuid": "dce49c2d-a6b3-4eba-a9bc-358af3988708",
             "type": "Texture"
         }

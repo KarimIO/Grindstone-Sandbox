@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "43bacde7-73c7-45a4-ac1c-8100a457d541",
     "subassets": [
         {
-            "name": "Sponza_Column_c_normal",
+            "displayName": "Sponza_Column_c_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Column_c_normal",
             "uuid": "43bacde7-73c7-45a4-ac1c-8100a457d541",
             "type": "Texture"
         }

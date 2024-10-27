@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "e31535d0-1cb4-4011-8e91-255c3771c8c7",
     "subassets": [
         {
-            "name": "test",
+            "displayName": "test",
+            "address": "",
+            "subassetIdentifier": "test",
             "uuid": "e31535d0-1cb4-4011-8e91-255c3771c8c7",
             "type": "Scene"
         }

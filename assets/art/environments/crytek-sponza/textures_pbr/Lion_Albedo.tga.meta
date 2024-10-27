@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "b9cadd0a-7622-4800-9e49-1324172c0cde",
     "subassets": [
         {
-            "name": "Lion_Albedo",
+            "displayName": "Lion_Albedo",
+            "address": "",
+            "subassetIdentifier": "Lion_Albedo",
             "uuid": "b9cadd0a-7622-4800-9e49-1324172c0cde",
             "type": "Texture"
         }

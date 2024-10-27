@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "5d9ad3a9-73db-4d12-b1b0-b632b9b991c7",
     "subassets": [
         {
-            "name": "ChainTexture_Albedo",
+            "displayName": "ChainTexture_Albedo",
+            "address": "",
+            "subassetIdentifier": "ChainTexture_Albedo",
             "uuid": "5d9ad3a9-73db-4d12-b1b0-b632b9b991c7",
             "type": "Texture"
         }

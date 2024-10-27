@@ -1,134 +1,186 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
     "subassets": [
         {
-            "name": "Sponza",
+            "displayName": "Sponza",
+            "address": "",
+            "subassetIdentifier": "Sponza",
             "uuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
             "type": "Mesh3d"
         },
         {
-            "name": "Leaves",
+            "displayName": "Leaves",
+            "address": "",
+            "subassetIdentifier": "Leaves",
             "uuid": "69ec0502-7ff9-4612-a9e8-b2446643e89c",
             "type": "Material"
         },
         {
-            "name": "VasePlant",
+            "displayName": "VasePlant",
+            "address": "",
+            "subassetIdentifier": "VasePlant",
             "uuid": "2029abc4-b6e8-41d0-be96-49d22b0ff99f",
             "type": "Material"
         },
         {
-            "name": "VaseRoudn",
+            "displayName": "VaseRoudn",
+            "address": "",
+            "subassetIdentifier": "VaseRoudn",
             "uuid": "9e3df9ef-99d6-4010-ba41-c32ca09c3ece",
             "type": "Material"
         },
         {
-            "name": "Background",
+            "displayName": "Background",
+            "address": "",
+            "subassetIdentifier": "Background",
             "uuid": "b3f4525e-a08e-4ff8-8141-b7f634c430d4",
             "type": "Material"
         },
         {
-            "name": "Fabric Red",
+            "displayName": "Fabric Red",
+            "address": "",
+            "subassetIdentifier": "Fabric Red",
             "uuid": "5d60fa9f-29b7-4245-a2d8-3bfe0a41a3c3",
             "type": "Material"
         },
         {
-            "name": "Bricks",
+            "displayName": "Bricks",
+            "address": "",
+            "subassetIdentifier": "Bricks",
             "uuid": "4ccc2824-1307-4ca8-9cf5-eb680f08f8ac",
             "type": "Material"
         },
         {
-            "name": "Arch",
+            "displayName": "Arch",
+            "address": "",
+            "subassetIdentifier": "Arch",
             "uuid": "59339279-0493-4041-8c78-6899da8e4000",
             "type": "Material"
         },
         {
-            "name": "Ceiling",
+            "displayName": "Ceiling",
+            "address": "",
+            "subassetIdentifier": "Ceiling",
             "uuid": "ab814bb6-e567-4cbb-9757-a03078acd60c",
             "type": "Material"
         },
         {
-            "name": "Column A",
+            "displayName": "Column A",
+            "address": "",
+            "subassetIdentifier": "Column A",
             "uuid": "c599895b-9631-4419-ae8f-cbf3dad07891",
             "type": "Material"
         },
         {
-            "name": "Floor",
+            "displayName": "Floor",
+            "address": "",
+            "subassetIdentifier": "Floor",
             "uuid": "c09c3e71-db37-410f-a9d4-cbf2992631f6",
             "type": "Material"
         },
         {
-            "name": "Column C",
+            "displayName": "Column C",
+            "address": "",
+            "subassetIdentifier": "Column C",
             "uuid": "a6161261-adb4-48f6-997f-191620342269",
             "type": "Material"
         },
         {
-            "name": "Details",
+            "displayName": "Details",
+            "address": "",
+            "subassetIdentifier": "Details",
             "uuid": "c958d072-b723-45d0-a545-c8c0c149fb3d",
             "type": "Material"
         },
         {
-            "name": "Column B",
+            "displayName": "Column B",
+            "address": "",
+            "subassetIdentifier": "Column B",
             "uuid": "0abe259c-a6be-4597-b4a1-b4ff5e761dbd",
             "type": "Material"
         },
         {
-            "name": "Material__47.002",
+            "displayName": "Material__47.002",
+            "address": "",
+            "subassetIdentifier": "Material__47.002",
             "uuid": "2c53ea50-01e7-4477-8bd6-a5a0c1051b8c",
             "type": "Material"
         },
         {
-            "name": "Flagpole",
+            "displayName": "Flagpole",
+            "address": "",
+            "subassetIdentifier": "Flagpole",
             "uuid": "d41a255c-a82a-49b4-a810-4fb591e32b90",
             "type": "Material"
         },
         {
-            "name": "Fabric Green",
+            "displayName": "Fabric Green",
+            "address": "",
+            "subassetIdentifier": "Fabric Green",
             "uuid": "e9852309-29cb-4ec6-bfb2-f5331a11b939",
             "type": "Material"
         },
         {
-            "name": "Fabric Blue",
+            "displayName": "Fabric Blue",
+            "address": "",
+            "subassetIdentifier": "Fabric Blue",
             "uuid": "130a033e-4504-4322-8058-cf8a982d0aec",
             "type": "Material"
         },
         {
-            "name": "Curatin Blue",
+            "displayName": "Curatin Blue",
+            "address": "",
+            "subassetIdentifier": "Curatin Blue",
             "uuid": "a10dedd2-e343-424f-9b55-834aadf99766",
             "type": "Material"
         },
         {
-            "name": "Curtain Red",
+            "displayName": "Curtain Red",
+            "address": "",
+            "subassetIdentifier": "Curtain Red",
             "uuid": "a53c14cb-cdb7-431e-8d5c-28598ad95ebb",
             "type": "Material"
         },
         {
-            "name": "Curtain Green",
+            "displayName": "Curtain Green",
+            "address": "",
+            "subassetIdentifier": "Curtain Green",
             "uuid": "e6391407-a0ba-41ff-aacd-aeda870fc1ac",
             "type": "Material"
         },
         {
-            "name": "Chain",
+            "displayName": "Chain",
+            "address": "",
+            "subassetIdentifier": "Chain",
             "uuid": "5625cbb9-8b7b-4cf6-82e9-747c81d6c031",
             "type": "Material"
         },
         {
-            "name": "VaseHanging",
+            "displayName": "VaseHanging",
+            "address": "",
+            "subassetIdentifier": "VaseHanging",
             "uuid": "bb425eff-7b7d-4ff9-b517-ecccf8ea0536",
             "type": "Material"
         },
         {
-            "name": "Vase",
+            "displayName": "Vase",
+            "address": "",
+            "subassetIdentifier": "Vase",
             "uuid": "802ab4ad-92a4-436f-94ad-69853a1852d1",
             "type": "Material"
         },
         {
-            "name": "Lion",
+            "displayName": "Lion",
+            "address": "",
+            "subassetIdentifier": "Lion",
             "uuid": "d95f691e-4d49-4f1c-9687-3748a12e79c3",
             "type": "Material"
         },
         {
-            "name": "Roof",
+            "displayName": "Roof",
+            "address": "",
+            "subassetIdentifier": "Roof",
             "uuid": "c3b37926-bfb1-4961-bb30-37167934404c",
             "type": "Material"
         }

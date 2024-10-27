@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "aed0f55e-c869-420f-aace-a3d65fc80fda",
     "subassets": [
         {
-            "name": "Sponza_Roof_normal",
+            "displayName": "Sponza_Roof_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Roof_normal",
             "uuid": "aed0f55e-c869-420f-aace-a3d65fc80fda",
             "type": "Texture"
         }

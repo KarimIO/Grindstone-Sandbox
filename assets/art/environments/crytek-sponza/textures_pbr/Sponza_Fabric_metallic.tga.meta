@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "67520a69-edad-4cfe-95e5-79c1b23149ea",
     "subassets": [
         {
-            "name": "Sponza_Fabric_metallic",
+            "displayName": "Sponza_Fabric_metallic",
+            "address": "",
+            "subassetIdentifier": "Sponza_Fabric_metallic",
             "uuid": "67520a69-edad-4cfe-95e5-79c1b23149ea",
             "type": "Texture"
         }

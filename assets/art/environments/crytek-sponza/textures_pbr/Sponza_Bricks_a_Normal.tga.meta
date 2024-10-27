@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "23676055-ae19-4712-95ae-697882d05744",
     "subassets": [
         {
-            "name": "Sponza_Bricks_a_Normal",
+            "displayName": "Sponza_Bricks_a_Normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Bricks_a_Normal",
             "uuid": "23676055-ae19-4712-95ae-697882d05744",
             "type": "Texture"
         }

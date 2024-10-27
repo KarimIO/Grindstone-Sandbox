@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "fa62829e-5bf3-45d5-afd7-d746fcac2c11",
     "subassets": [
         {
-            "name": "Sponza_Curtain_Red_diffuse",
+            "displayName": "Sponza_Curtain_Red_diffuse",
+            "address": "",
+            "subassetIdentifier": "Sponza_Curtain_Red_diffuse",
             "uuid": "fa62829e-5bf3-45d5-afd7-d746fcac2c11",
             "type": "Texture"
         }

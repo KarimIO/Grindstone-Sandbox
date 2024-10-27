@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "d850ef78-be70-4005-a9c8-6d085a38862c",
     "subassets": [
         {
-            "name": "Lion_Normal",
+            "displayName": "Lion_Normal",
+            "address": "",
+            "subassetIdentifier": "Lion_Normal",
             "uuid": "d850ef78-be70-4005-a9c8-6d085a38862c",
             "type": "Texture"
         }

@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "cf98588b-c109-4447-9432-3cd9242008dc",
     "subassets": [
         {
-            "name": "Sponza_Ceiling_diffuse",
+            "displayName": "Sponza_Ceiling_diffuse",
+            "address": "",
+            "subassetIdentifier": "Sponza_Ceiling_diffuse",
             "uuid": "cf98588b-c109-4447-9432-3cd9242008dc",
             "type": "Texture"
         }

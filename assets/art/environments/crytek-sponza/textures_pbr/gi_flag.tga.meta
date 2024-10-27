@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "d8fa8007-a3b0-42ab-9035-e188fedfffa4",
     "subassets": [
         {
-            "name": "gi_flag",
+            "displayName": "gi_flag",
+            "address": "",
+            "subassetIdentifier": "gi_flag",
             "uuid": "d8fa8007-a3b0-42ab-9035-e188fedfffa4",
             "type": "Texture"
         }

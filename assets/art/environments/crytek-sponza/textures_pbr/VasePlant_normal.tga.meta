@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "864f1b3d-8d24-417a-8181-94159c149ab4",
     "subassets": [
         {
-            "name": "VasePlant_normal",
+            "displayName": "VasePlant_normal",
+            "address": "",
+            "subassetIdentifier": "VasePlant_normal",
             "uuid": "864f1b3d-8d24-417a-8181-94159c149ab4",
             "type": "Texture"
         }

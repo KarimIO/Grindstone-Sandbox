@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "29563d74-a366-4bc4-a740-5cf23f52b80d",
     "subassets": [
         {
-            "name": "Vase_roughness",
+            "displayName": "Vase_roughness",
+            "address": "",
+            "subassetIdentifier": "Vase_roughness",
             "uuid": "29563d74-a366-4bc4-a740-5cf23f52b80d",
             "type": "Texture"
         }

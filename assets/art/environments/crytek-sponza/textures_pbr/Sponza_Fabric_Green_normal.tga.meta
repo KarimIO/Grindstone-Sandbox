@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "05e2a472-bc18-4cfa-8c1e-e153728e926c",
     "subassets": [
         {
-            "name": "Sponza_Fabric_Green_normal",
+            "displayName": "Sponza_Fabric_Green_normal",
+            "address": "",
+            "subassetIdentifier": "Sponza_Fabric_Green_normal",
             "uuid": "05e2a472-bc18-4cfa-8c1e-e153728e926c",
             "type": "Texture"
         }

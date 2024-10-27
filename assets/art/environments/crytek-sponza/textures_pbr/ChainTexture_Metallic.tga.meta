@@ -1,9 +1,11 @@
 {
-    "version": 1,
+    "metaFileVersion": 1,
     "defaultUuid": "26021469-4dac-4972-a758-5aff8830333d",
     "subassets": [
         {
-            "name": "ChainTexture_Metallic",
+            "displayName": "ChainTexture_Metallic",
+            "address": "",
+            "subassetIdentifier": "ChainTexture_Metallic",
             "uuid": "26021469-4dac-4972-a758-5aff8830333d",
             "type": "Texture"
         }
