@@ -1,4 +1,5 @@
 {
+    "assetImporterVersion": 1,
     "metaFileVersion": 1,
     "defaultUuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
     "subassets": [
@@ -7,7 +8,7 @@
             "address": "",
             "subassetIdentifier": "Sponza",
             "uuid": "51b68007-cebc-41fa-aec0-a6b6c6f58d90",
-            "type": "Mesh3d"
+            "type": "Scene"
         },
         {
             "displayName": "Leaves",
@@ -183,6 +184,181 @@
             "subassetIdentifier": "Roof",
             "uuid": "c3b37926-bfb1-4961-bb30-37167934404c",
             "type": "Material"
+        },
+        {
+            "displayName": "sponza.002",
+            "address": "",
+            "subassetIdentifier": "sponza.002",
+            "uuid": "2453e835-8d66-4b68-917a-f62f61c499f3",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0021",
+            "address": "",
+            "subassetIdentifier": "sponza.0021",
+            "uuid": "15a48019-6a06-4a6e-80c8-a9bc4b77e2d0",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0022",
+            "address": "",
+            "subassetIdentifier": "sponza.0022",
+            "uuid": "f4d64e73-6af0-456a-81fd-6478ce3c59e4",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0023",
+            "address": "",
+            "subassetIdentifier": "sponza.0023",
+            "uuid": "1542d060-74b7-4fbf-a3e9-58d4adcb7ec8",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0024",
+            "address": "",
+            "subassetIdentifier": "sponza.0024",
+            "uuid": "7b55bbd8-3706-4fa8-88fc-a39a6390a58b",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0025",
+            "address": "",
+            "subassetIdentifier": "sponza.0025",
+            "uuid": "cef4e45c-c43d-4c3f-81cd-c0a9843889c3",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0026",
+            "address": "",
+            "subassetIdentifier": "sponza.0026",
+            "uuid": "14e39cd5-0840-4750-b252-3e101fc679c5",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0027",
+            "address": "",
+            "subassetIdentifier": "sponza.0027",
+            "uuid": "b4f4b673-3b6d-42b2-ab57-ffd4fa25ba6f",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0028",
+            "address": "",
+            "subassetIdentifier": "sponza.0028",
+            "uuid": "3b4ffb04-5881-45e9-b3d8-6c883aea1a2b",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.0029",
+            "address": "",
+            "subassetIdentifier": "sponza.0029",
+            "uuid": "c2d35809-f39a-4088-83a7-85687c228172",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00210",
+            "address": "",
+            "subassetIdentifier": "sponza.00210",
+            "uuid": "d14e584b-3440-40b8-9a64-77b7c1219b92",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00211",
+            "address": "",
+            "subassetIdentifier": "sponza.00211",
+            "uuid": "b758e4a4-380d-40e9-97da-a93dd61c47a3",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00212",
+            "address": "",
+            "subassetIdentifier": "sponza.00212",
+            "uuid": "8767d8de-43c3-47e3-b9ab-048d3b6a80a3",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00213",
+            "address": "",
+            "subassetIdentifier": "sponza.00213",
+            "uuid": "b00b633b-ff2c-418e-b258-0ece40c3cde6",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00214",
+            "address": "",
+            "subassetIdentifier": "sponza.00214",
+            "uuid": "fc6f7fbd-ab64-4543-9140-f4900faf064b",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00215",
+            "address": "",
+            "subassetIdentifier": "sponza.00215",
+            "uuid": "34cb62a9-8e5f-4822-9c4b-44d45c978b2b",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00216",
+            "address": "",
+            "subassetIdentifier": "sponza.00216",
+            "uuid": "b214f7e1-1b7d-433f-b96c-6cfbd2e2122f",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00217",
+            "address": "",
+            "subassetIdentifier": "sponza.00217",
+            "uuid": "29fb0c7b-4b1e-4eca-bc7c-bfc29937d31c",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00218",
+            "address": "",
+            "subassetIdentifier": "sponza.00218",
+            "uuid": "4ece5b5c-7a48-4d85-8595-fd6ad16ef206",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00219",
+            "address": "",
+            "subassetIdentifier": "sponza.00219",
+            "uuid": "9609bc05-ff47-4734-89c1-2e78fa8ff9f8",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00220",
+            "address": "",
+            "subassetIdentifier": "sponza.00220",
+            "uuid": "36d1905d-90a9-4e02-bfbd-3b81d1fe79d0",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00221",
+            "address": "",
+            "subassetIdentifier": "sponza.00221",
+            "uuid": "f5d3e1bc-016e-4d93-97e7-5496503b1d8c",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00222",
+            "address": "",
+            "subassetIdentifier": "sponza.00222",
+            "uuid": "7abdac5e-d84e-4e99-8d6a-046eb16e6b38",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00223",
+            "address": "",
+            "subassetIdentifier": "sponza.00223",
+            "uuid": "d93a8f9a-fb12-41d2-9260-d0858af8c17b",
+            "type": "Mesh3d"
+        },
+        {
+            "displayName": "sponza.00224",
+            "address": "",
+            "subassetIdentifier": "sponza.00224",
+            "uuid": "7217bc2e-7e57-4d4a-ae0e-c8f7574e5243",
+            "type": "Mesh3d"
         }
     ]
 }
