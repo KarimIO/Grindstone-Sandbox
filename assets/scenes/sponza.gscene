@@ -1,0 +1,1634 @@
+{
+	"name": "Sponza",
+	"entities": [
+		{
+			"entityId": 0,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "RootNode"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							0.001,
+							0.001,
+							0.001
+						]
+					}
+				}
+			]
+		},
+		{
+			"entityId": 1,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							20,
+							20,
+							20
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 0
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"69ec0502-7ff9-4612-a9e8-b2446643e89c"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "2453e835-8d66-4b68-917a-f62f61c499f3"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 2,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 1"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"2029abc4-b6e8-41d0-be96-49d22b0ff99f"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "15a48019-6a06-4a6e-80c8-a9bc4b77e2d0"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 3,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 2"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"9e3df9ef-99d6-4010-ba41-c32ca09c3ece"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "f4d64e73-6af0-456a-81fd-6478ce3c59e4"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 4,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 3"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"b3f4525e-a08e-4ff8-8141-b7f634c430d4"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "1542d060-74b7-4fbf-a3e9-58d4adcb7ec8"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 5,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 4"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"5d60fa9f-29b7-4245-a2d8-3bfe0a41a3c3"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "7b55bbd8-3706-4fa8-88fc-a39a6390a58b"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 6,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 5"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"4ccc2824-1307-4ca8-9cf5-eb680f08f8ac"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "cef4e45c-c43d-4c3f-81cd-c0a9843889c3"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 7,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 6"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"59339279-0493-4041-8c78-6899da8e4000"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "14e39cd5-0840-4750-b252-3e101fc679c5"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 8,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 7"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"ab814bb6-e567-4cbb-9757-a03078acd60c"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "b4f4b673-3b6d-42b2-ab57-ffd4fa25ba6f"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 9,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 8"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"c599895b-9631-4419-ae8f-cbf3dad07891"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "3b4ffb04-5881-45e9-b3d8-6c883aea1a2b"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 10,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 9"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"c09c3e71-db37-410f-a9d4-cbf2992631f6"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "c2d35809-f39a-4088-83a7-85687c228172"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 11,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 10"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"a6161261-adb4-48f6-997f-191620342269"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "d14e584b-3440-40b8-9a64-77b7c1219b92"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 12,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 11"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"c958d072-b723-45d0-a545-c8c0c149fb3d"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "b758e4a4-380d-40e9-97da-a93dd61c47a3"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 13,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 12"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"0abe259c-a6be-4597-b4a1-b4ff5e761dbd"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "8767d8de-43c3-47e3-b9ab-048d3b6a80a3"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 14,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 13"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"2c53ea50-01e7-4477-8bd6-a5a0c1051b8c"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "b00b633b-ff2c-418e-b258-0ece40c3cde6"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 15,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 14"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"d41a255c-a82a-49b4-a810-4fb591e32b90"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "fc6f7fbd-ab64-4543-9140-f4900faf064b"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 16,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 15"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"e9852309-29cb-4ec6-bfb2-f5331a11b939"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "34cb62a9-8e5f-4822-9c4b-44d45c978b2b"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 17,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 16"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"130a033e-4504-4322-8058-cf8a982d0aec"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "b214f7e1-1b7d-433f-b96c-6cfbd2e2122f"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 18,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 17"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"a10dedd2-e343-424f-9b55-834aadf99766"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "29fb0c7b-4b1e-4eca-bc7c-bfc29937d31c"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 19,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 18"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"a53c14cb-cdb7-431e-8d5c-28598ad95ebb"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "4ece5b5c-7a48-4d85-8595-fd6ad16ef206"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 20,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 19"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"e6391407-a0ba-41ff-aacd-aeda870fc1ac"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "9609bc05-ff47-4734-89c1-2e78fa8ff9f8"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 21,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 20"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"5625cbb9-8b7b-4cf6-82e9-747c81d6c031"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "36d1905d-90a9-4e02-bfbd-3b81d1fe79d0"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 22,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 21"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"bb425eff-7b7d-4ff9-b517-ecccf8ea0536"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "f5d3e1bc-016e-4d93-97e7-5496503b1d8c"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 23,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 22"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"802ab4ad-92a4-436f-94ad-69853a1852d1"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "7abdac5e-d84e-4e99-8d6a-046eb16e6b38"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 24,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 23"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"d95f691e-4d49-4f1c-9687-3748a12e79c3"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "d93a8f9a-fb12-41d2-9260-d0858af8c17b"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 25,
+			"components": [
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "sponza - Mesh 24"
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0,
+							0,
+							0
+						],
+						"rotation": [
+							0,
+							0,
+							0,
+							1
+						],
+						"scale": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 1
+					}
+				},
+				{
+					"component": "MeshRenderer",
+					"params": {
+						"materials": [
+							"c3b37926-bfb1-4961-bb30-37167934404c"
+						]
+					}
+				},
+				{
+					"component": "Mesh",
+					"params": {
+						"mesh": "7217bc2e-7e57-4d4a-ae0e-c8f7574e5243"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 26,
+			"components": [
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0.0,
+							0.0,
+							0.0
+						],
+						"rotation": [
+							0.2512179911136627,
+							0.5602214932441711,
+							-0.5428524017333984,
+							0.5730206966400146
+						],
+						"scale": [
+							1.0,
+							1.0,
+							1.0
+						]
+					}
+				},
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Sun Light"
+					}
+				},
+				{
+					"component": "Parent",
+					"params": {
+						"parentEntity": 4294967295
+					}
+				},
+				{
+					"component": "DirectionalLight",
+					"params": {
+						"color": [
+							1.0,
+							0.8999999761581421,
+							0.6000000238418579
+						],
+						"sourceRadius": 40.0,
+						"intensity": 18.0,
+						"shadowResolution": 2048.0
+					}
+				}
+			]
+		},
+		{
+			"entityId": 27,
+			"components": [
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							0.0,
+							0.0,
+							0.0
+						],
+						"rotation": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"scale": [
+							1.0,
+							1.0,
+							1.0
+						]
+					}
+				},
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Environment Map"
+					}
+				},
+				{
+					"component": "EnvironmentMap",
+					"params": {
+						"specularTexture": "85a45f9c-0963-41d1-89f9-f16a07fabf04"
+					}
+				}
+			]
+		},
+		{
+			"entityId": 29,
+			"components": [
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							-22.0,
+							2.0,
+							0.0
+						],
+						"rotation": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"scale": [
+							1.0,
+							1.0,
+							1.0
+						]
+					}
+				},
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Spot Light"
+					}
+				},
+				{
+					"component": "SpotLight",
+					"params": {
+						"color": [
+							0.20000000298023224,
+							0.8999999761581421,
+							0.30000001192092896
+						],
+						"attenuationRadius": 15.0,
+						"intensity": 200.0,
+						"innerAngle": 25.0,
+						"outerAngle": 50.0,
+						"shadowResolution": 600.0
+					}
+				}
+			]
+		},
+		{
+			"entityId": 30,
+			"components": [
+				{
+					"component": "PointLight",
+					"params": {
+						"color": [
+							0.10000000149011612,
+							0.4000000059604645,
+							0.800000011920929
+						],
+						"attenuationRadius": 40.0,
+						"intensity": 80.0
+					}
+				},
+				{
+					"component": "Transform",
+					"params": {
+						"position": [
+							21.0,
+							2.0,
+							0.0
+						],
+						"rotation": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"scale": [
+							1.0,
+							1.0,
+							1.0
+						]
+					}
+				},
+				{
+					"component": "Tag",
+					"params": {
+						"tag": "Point Light 2"
+					}
+				}
+			]
+		},
+		{
+            "entityId": 31,
+            "components": [
+                {
+                    "component": "Transform",
+                    "params": {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "scale": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    }
+                },
+                {
+                    "component": "Tag",
+                    "params": {
+                        "tag": "Player"
+                    }
+                },
+                {
+                    "component": "Parent",
+                    "params": {
+                        "parentEntity": 4294967295
+                    }
+                },
+				{
+					"component": "CSharpScript",
+					"params": {
+						"assembly": "Application-CSharp",
+						"scriptNamespace": "",
+						"scriptClass": "Player"
+					}
+				},
+                {
+                    "component": "CapsuleCollider",
+                    "params": {
+                        "radius": 1.0,
+                        "height": 1.0
+                    }
+                },
+                {
+                    "component": "RigidBody",
+                    "params": {
+                        "mass": 1.0,
+                        "friction": 1.0,
+                        "restitution": 1.0,
+                        "dampingLinear": 1.0,
+                        "dampingRotational": 1.0
+                    }
+                }
+            ]
+        },
+        {
+            "entityId": 32,
+            "components": [
+                {
+                    "component": "Transform",
+                    "params": {
+                        "position": [
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "scale": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    }
+                },
+                {
+                    "component": "Tag",
+                    "params": {
+                        "tag": "Player Camera"
+                    }
+                },
+                {
+                    "component": "Parent",
+                    "params": {
+                        "parentEntity": 31
+                    }
+                },
+                {
+                    "component": "Camera",
+                    "params": {
+                        "isMainCamera": true,
+                        "isOrthographic": false,
+                        "nearPlaneDistance": 0.10000000149011612,
+                        "farPlaneDistance": 200.0,
+                        "fieldOfView": 1.5707963705062866,
+                        "aspectRatio": 1.3333333730697632
+                    }
+                },
+                {
+                    "component": "AudioListener",
+                    "params": {
+                    }
+                }
+            ]
+        }
+	]
+}

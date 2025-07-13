@@ -1,0 +1,14 @@
+{
+    "assetImporterVersion": 1,
+    "metaFileVersion": 1,
+    "defaultUuid": "2eadae63-7fc4-444b-8dc0-e23cae3b6b88",
+    "subassets": [
+        {
+            "displayName": "sponza",
+            "address": "",
+            "subassetIdentifier": "sponza",
+            "uuid": "2eadae63-7fc4-444b-8dc0-e23cae3b6b88",
+            "type": "Scene"
+        }
+    ]
+}
