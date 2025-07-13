@@ -1,8 +1,10 @@
 PluginEditorAudioImporter
 PluginEditorMaterialImporter
 PluginEditorModelImporter
-PluginEditorShaderImporter
+PluginEditorPipelineSetImporter
 PluginEditorTextureImporter
+PluginAudioOpenAL
 PluginBulletPhysics
-PluginScriptCSharp
 PluginRenderables3D
+PluginRendererDeferred
+PluginScriptCSharp
